@@ -5,7 +5,7 @@ abstract: "A public-safe defensive framework for engineering mission-resilient s
 authors:
   - name: "AI-Compressed Cyber Defense Framework contributors"
 version: "v0.1.0"
-date-released: "2026-06-28"
+date-released: "2026-06-29"
 repository-code: "https://github.com/GLOBAL-AI-GOVERNANCE/ai-compressed-cyber-defense-framework"
 license: "Apache-2.0"
 keywords:
