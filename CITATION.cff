@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it as below."
+title: "AI-Compressed Cyber Defense Framework: Structural Security for AI-Compressed Cyberattacks"
+abstract: "A public-safe defensive framework for engineering mission-resilient systems against AI-accelerated vulnerability discovery, exploit validation, multi-step attack reasoning, lateral movement, and post-compromise escalation. Grounded in NIST SP 800-160 systems security engineering principles with emphasis on domain separation."
+authors:
+  - name: "AI-Compressed Cyber Defense Framework contributors"
+version: "v0.1.0"
+date-released: "2026-06-28"
+repository-code: "https://github.com/GLOBAL-AI-GOVERNANCE/ai-compressed-cyber-defense-framework"
+license: "Apache-2.0"
+keywords:
+  - cybersecurity
+  - ai-security
+  - systems-security-engineering
+  - domain-separation
+  - nist-sp-800-160
+  - mission-resilience
+  - zero-trust
+  - critical-infrastructure
+  - secure-by-design
+preferred-citation:
+  type: "software"
+  authors:
+    - name: "AI-Compressed Cyber Defense Framework contributors"
+  title: "AI-Compressed Cyber Defense Framework: Structural Security for AI-Compressed Cyberattacks"
+  version: "v0.1.0"
+  year: 2026
+  publisher:
+    name: "GitHub"
