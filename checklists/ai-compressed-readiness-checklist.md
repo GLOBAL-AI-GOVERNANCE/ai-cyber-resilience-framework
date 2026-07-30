@@ -1,7 +1,7 @@
 # AI-Compressed Readiness Checklist
 
 **Purpose:** High-level assessment of structural security posture against AI-compressed cyber threats
-**Version:** v0.1.0 — AI-Compressed Cyber Defense Framework
+**Version:** v0.1.1 — AI Cyber Resilience Framework
 **Instructions:** For each item, indicate status and note key evidence or gaps. Focus on one critical system or enclave at a time.
 
 **Documentation note:** Leave evidence fields blank if no evidence exists yet. The goal is progressive documentation: capture current state first, then close gaps with verifiable artifacts.

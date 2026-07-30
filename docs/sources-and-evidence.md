@@ -1,6 +1,6 @@
 # Sources and Evidence Log
 
-**Version:** v0.1.0 — AI-Compressed Cyber Defense Framework
+**Version:** v0.1.1 — AI Cyber Resilience Framework
 
 This file supports claim discipline for public release. It is not a substitute for independent due diligence.
 
@@ -15,10 +15,12 @@ This file supports claim discipline for public release. It is not a substitute f
 | UK AI Security Institute, *Our evaluation of Claude Mythos Preview’s cyber capabilities* — https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities | Independent public evaluation of cyber capability trend | External validation for controlled-evaluation language and cyber-defense urgency |
 | Saltzer & Schroeder, *The Protection of Information in Computer Systems* — https://doi.org/10.1109/PROC.1975.9939 | Foundational security design principles | Least common mechanism / least sharing grounding |
 
-## External Source Verification — v0.1.0
+## External Source Verification — v0.1.1
 
-**Verification date:** 2026-06-28  
-**Final live re-check:** 2026-06-29  
+**Verification date:** 2026-07-29
+**Final live re-check:** 2026-07-29
+**Revalidation scope:** The five listed public source pages were re-opened on 2026-07-29. This confirms page availability and the bounded support summarized below; it is not an independent replication of vendor or institute findings.
+
 **Public-release choice:** The package relies on summary-level public sources that are useful to end users and avoids detailed exploit-capability articles that are unnecessary for applying this defensive framework.
 
 | URL | Confirmed public page title | Specific support for this framework |

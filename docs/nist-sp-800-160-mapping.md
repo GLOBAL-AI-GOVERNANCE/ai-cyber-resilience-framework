@@ -1,7 +1,7 @@
 # NIST SP 800-160 Mapping
 
-**Traceability from NIST SP 800-160, Vol. 1 Rev. 1 Principles to AI-Compressed Cyber Defense Framework Artifacts**
-**Version:** v0.1.0
+**Traceability from NIST SP 800-160, Vol. 1 Rev. 1 Principles to AI Cyber Resilience Framework Artifacts**
+**Version:** v0.1.1
 
 ---
 
@@ -13,7 +13,7 @@ This mapping helps organizations demonstrate alignment between their use of this
 
 ## Core Mapping
 
-| NIST SP 800-160 Principle          | Primary AI-Compressed Cyber Defense Framework Artifact(s)                          | Evidence Type                  | Notes |
+| NIST SP 800-160 Principle          | Primary AI Cyber Resilience Framework Artifact(s)                          | Evidence Type                  | Notes |
 |------------------------------------|-----------------------------------------------------------------------|--------------------------------|-------|
 | **Domain Separation**             | Domain Boundary Inventory<br>Authorized Flow Matrix<br>Domain Separation Assessment | Architecture diagrams, interface specs, test results | Foundational principle |
 | **Least Privilege**               | Privileged Access Isolation Checklist<br>Evidence Cards              | Account inventories, role matrices, access reviews | Within-domain control |
@@ -48,4 +48,4 @@ This mapping supports **trustworthiness claims** in the sense of NIST SP 800-160
 
 ---
 
-*Part of AI-Compressed Cyber Defense Framework v0.1.0*
+*Part of AI Cyber Resilience Framework v0.1.1*

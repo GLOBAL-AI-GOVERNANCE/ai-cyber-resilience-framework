@@ -1,26 +1,25 @@
 # Security Policy
 
-**AI-Compressed Cyber Defense Framework** is a public defensive framework. It contains no executable code, no exploit material, and no sensitive technical details that could be misused.
+**AI Cyber Resilience Framework** is a public defensive documentation repository. It contains no executable framework runtime, exploit code, or target-specific offensive procedures.
 
-## Reporting Security Issues
+## Report Privately
 
-Because this is a documentation and framework repository focused on defensive architecture, traditional software vulnerability reporting is not applicable in most cases.
+Use GitHub private vulnerability reporting or a private security advisory for:
 
-If you identify:
-- Content that appears to cross the public-safe boundary (e.g., overly specific offensive details)
-- Inaccuracies in technical descriptions that could mislead implementers
-- Licensing or attribution issues
+- Content that may cross the public-safe boundary
+- Sensitive technical details that should not be disclosed publicly
+- Materially misleading security guidance
+- Licensing, attribution, or provenance concerns with security implications
+- Integrity problems in the repository or its release process
 
-Please open a GitHub issue or contact the maintainers directly with details.
+Do not place sensitive vulnerability details, credentials, target information, or potentially harmful procedures in a public issue.
+
+Public issues may be used for non-sensitive documentation defects, broken links, usability improvements, and clearly public source corrections.
 
 ## Scope
 
-This policy covers the content of the repository itself. It does not cover third-party tools, products, or architectures that may be assessed using this framework.
+This policy covers repository content, workflows, release integrity, and safe-use boundaries. It does not cover third-party products, systems, organizations, or architectures assessed with these materials.
 
-## Responsible Disclosure
+## Boundary
 
-We appreciate responsible disclosure of any issues that could affect the integrity or safe use of this defensive resource.
-
----
-
-*Maintained as part of AI-Compressed Cyber Defense Framework v0.1.0*
+A report, template, checklist, or successful repository check does not certify an architecture or prove that a system is secure. Users remain responsible for authorization, evidence quality, testing, engineering judgment, and operational decisions.

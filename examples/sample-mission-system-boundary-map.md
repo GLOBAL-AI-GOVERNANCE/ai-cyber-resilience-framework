@@ -1,7 +1,7 @@
 # Sample Mission System Boundary Map
 
 **Example System:** Notional High-Consequence Mission Planning & Control System (public-safe illustrative example only)
-**Version:** v0.1.0 — AI-Compressed Cyber Defense Framework
+**Version:** v0.1.1 — AI Cyber Resilience Framework
 
 ## Domain Structure (Illustrative)
 

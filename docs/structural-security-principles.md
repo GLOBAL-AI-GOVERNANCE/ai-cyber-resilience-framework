@@ -1,7 +1,7 @@
 # Structural Security Design Principles
 
 **Domain Separation and Complementary NIST SP 800-160 Principles for AI-Compressed Threat Defense**
-**Version:** v0.1.0 — AI-Compressed Cyber Defense Framework
+**Version:** v0.1.1 — AI Cyber Resilience Framework
 
 ---
 
@@ -124,4 +124,4 @@ The result is a system where damaging attacks are **structurally difficult**, **
 
 ---
 
-*Part of AI-Compressed Cyber Defense Framework v0.1.0*
+*Part of AI Cyber Resilience Framework v0.1.1*

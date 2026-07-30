@@ -1,7 +1,7 @@
 # Public-Safe Claims and Boundaries
 
-**Explicit Scope and Limitations of AI-Compressed Cyber Defense Framework v0.1.0**
-**Version:** v0.1.0
+**Explicit Scope and Limitations of AI Cyber Resilience Framework v0.1.1**
+**Version:** v0.1.1
 
 ---
 
@@ -54,4 +54,4 @@ All content in this repository should remain within defensive, public-safe bound
 
 ---
 
-*This document is part of AI-Compressed Cyber Defense Framework v0.1.0 and should be included with any distribution or derivative work.*
+*This document is part of AI Cyber Resilience Framework v0.1.1 and should be included with any distribution or derivative work.*
