@@ -1,11 +1,13 @@
-# AI-Compressed Cyber Defense Framework
+# AI Cyber Resilience Framework
 
-**Structural security for AI-compressed cyberattacks**
+[![Framework Checks](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml/badge.svg?branch=main)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml)
+
+**Structural security against AI-compressed cyberattacks**
 
 > A public-safe defensive framework for engineering mission-resilient systems against AI-accelerated vulnerability discovery, exploit validation, multi-step attack reasoning, lateral movement, and post-compromise escalation.
 
-**Version:** v0.1.0
-**Status:** Initial public defensive framework for assessment, architecture review, and evidence-based hardening
+**Version:** v0.1.1
+**Status:** Public defensive reference framework for architecture assessment, evidence capture, and hardening planning. It is not executable software, certification, or proof that a control works.
 **License:** Apache 2.0
 
 ---
@@ -127,7 +129,7 @@ All discussion of adversary behavior or AI capabilities is included only at the 
 
 ---
 
-## 5-Minute Quickstart
+## Start Here: 5-Minute Assessment
 
 1. Pick one critical system, enclave, or mission workflow.
 2. Open `checklists/ai-compressed-readiness-checklist.md`.
@@ -139,6 +141,21 @@ All discussion of adversary behavior or AI capabilities is included only at the 
 5. Record one evidence claim using `templates/evidence-card-template.md`.
 
 Do not start with the whole enterprise. Start with one system boundary and prove what is true.
+
+---
+
+## Finished Outcome
+
+For one authorized system boundary, the intended finished package is:
+
+- A Domain Boundary Inventory
+- An Authorized Flow Matrix
+- A completed readiness and domain-separation assessment
+- Evidence cards for major architectural claims
+- A prioritized architecture-hardening backlog
+- Named human owners for decisions, testing, exceptions, and follow-through
+
+This package supports architecture review and decision-making. It is not proof that controls are implemented or effective until qualified people validate the supplied evidence and test the actual environment.
 
 ---
 
@@ -169,18 +186,35 @@ Use `docs/sources-and-evidence.md` for source tracking and claim review.
 
 ---
 
+## Evidence Boundary
+
+This repository provides defensive documentation, mappings, checklists, templates, and an illustrative example. Repository checks can verify file integrity, internal links, citation consistency, and bounded public claims.
+
+They do not establish:
+
+- That an assessed architecture is complete or accurately represented
+- That a boundary blocks unauthorized flows in operation
+- That recovery, identity, telemetry, or isolation controls are effective
+- That an organization satisfies NIST guidance or any legal requirement
+- That AI capability forecasts will occur as described
+- That a system is secure, resilient, authorized, or fit for a mission
+
+Final conclusions require current authoritative sources, system-specific evidence, authorized testing, and human engineering judgment.
+
+---
+
 ## Citation
 
 If you use this framework in publications, assessments, or policy work, please cite:
 
 ```bibtex
-@misc{ai-compressed-cyber-defense-framework-v0.1.0,
-  title        = {AI-Compressed Cyber Defense Framework: Structural Security for AI-Compressed Cyberattacks},
-  author       = {{AI-Compressed Cyber Defense Framework contributors}},
+@misc{ai-cyber-resilience-framework-v0.1.1,
+  title        = {AI Cyber Resilience Framework: Structural Security Against AI-Compressed Cyberattacks},
+  author       = {{Global AI Governance contributors}},
   year         = {2026},
-  version      = {v0.1.0},
+  version      = {v0.1.1},
   howpublished = {GitHub repository},
-  url          = {https://github.com/GLOBAL-AI-GOVERNANCE/ai-compressed-cyber-defense-framework}
+  url          = {https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework}
 }
 ```
 

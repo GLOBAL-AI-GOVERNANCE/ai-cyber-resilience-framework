@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve AI-Compressed Cyber Defense Framework.
+Thank you for helping improve AI Cyber Resilience Framework.
 
 This repository accepts defensive, public-safe contributions only.
 

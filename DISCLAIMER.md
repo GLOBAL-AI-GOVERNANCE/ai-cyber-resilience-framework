@@ -1,6 +1,6 @@
 # Disclaimer
 
-**AI-Compressed Cyber Defense Framework v0.1.0**
+**AI Cyber Resilience Framework v0.1.1**
 
 This repository provides a **public-safe defensive framework** for systems security engineering and mission resilience assessment. It is intended solely for defensive, educational, and governance purposes.
 

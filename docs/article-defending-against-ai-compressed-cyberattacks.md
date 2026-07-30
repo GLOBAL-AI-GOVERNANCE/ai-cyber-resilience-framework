@@ -3,7 +3,7 @@
 **Structural Security Design Principles for Mission Resilience in the Age of AI-Compressed Cyberattacks**
 
 **Grounded in NIST SP 800-160 systems security engineering principles**
-**Version:** v0.1.0 — AI-Compressed Cyber Defense Framework
+**Version:** v0.1.1 — AI Cyber Resilience Framework
 
 ---
 
@@ -190,4 +190,4 @@ Trustworthy secure systems — especially high-consequence systems where comprom
 
 ---
 
-*This article is part of the AI-Compressed Cyber Defense Framework v0.1.0 public defensive framework. It is intended for defensive architecture, risk assessment, and systems security engineering purposes only.*
+*This article is part of the AI Cyber Resilience Framework v0.1.1 public defensive framework. It is intended for defensive architecture, risk assessment, and systems security engineering purposes only.*
