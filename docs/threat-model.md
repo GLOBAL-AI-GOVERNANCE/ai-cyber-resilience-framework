@@ -1,7 +1,7 @@
 # AI-Compressed Cyber Threat Model
 
 **Focus:** Post-compromise window between initial access and mission impact
-**Version:** v0.1.0 — AI-Compressed Cyber Defense Framework
+**Version:** v0.1.1 — AI Cyber Resilience Framework
 **Classification:** Public-safe defensive framework
 
 ---
@@ -65,4 +65,4 @@ It focuses exclusively on the **defensive architectural response** required to m
 
 ---
 
-*Part of AI-Compressed Cyber Defense Framework v0.1.0*
+*Part of AI Cyber Resilience Framework v0.1.1*

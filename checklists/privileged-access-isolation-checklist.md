@@ -1,6 +1,6 @@
 # Privileged Access Isolation Checklist
 
-**Version:** v0.1.0 — AI-Compressed Cyber Defense Framework
+**Version:** v0.1.1 — AI Cyber Resilience Framework
 
 **Documentation note:** Leave evidence fields blank if no evidence exists yet. The goal is progressive documentation: capture current state first, then close gaps with verifiable artifacts.
 
