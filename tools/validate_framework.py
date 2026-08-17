@@ -15,6 +15,20 @@ CITATION = ROOT / "CITATION.cff"
 SOURCE_LOG = ROOT / "docs" / "sources-and-evidence.md"
 SECURITY = ROOT / "SECURITY.md"
 
+ASSURANCE_REQUIRED = (
+    ROOT / "docs" / "continuous-assurance-thread.md",
+    ROOT / "docs" / "lifecycle-assurance-thread.md",
+    ROOT / "docs" / "protective-state-model.md",
+    ROOT / "docs" / "trusted-setup-and-recovery.md",
+    ROOT / "docs" / "change-and-reauthorization.md",
+    ROOT / "docs" / "secure-ai-infrastructure-application.md",
+    ROOT / "schemas" / "schema-catalog.json",
+    ROOT / "examples" / "secure-inference-cell" / "reference-bundle.json",
+    ROOT / "tools" / "continuous_assurance.py",
+    ROOT / "tools" / "validate_assurance.py",
+    ROOT / "tests" / "test_continuous_assurance.py",
+)
+
 OLD_NAME = "AI-Compressed Cyber Defense Framework"
 OLD_SLUG = "ai-compressed-cyber-defense-framework"
 CURRENT_VERSION = "v0.1.1"
@@ -144,6 +158,15 @@ def validate_readme() -> None:
     if CURRENT_REPOSITORY not in text:
         fail("README does not use the current repository URL")
 
+    candidate_requirements = (
+        "v0.2.0 Development Candidate",
+        "## Continuous Assurance Thread",
+        "Current published release identity remains v0.1.1",
+    )
+    for requirement in candidate_requirements:
+        if requirement not in text:
+            fail(f"continuous-assurance candidate boundary missing: {requirement}")
+
 
 def extract_destination(raw: str) -> str:
     value = raw.strip()
@@ -271,6 +294,13 @@ def validate_workflow() -> None:
     if "permissions:\n  contents: read" not in text:
         fail("workflow permissions are not read-only")
 
+    for command in (
+        "python3 -B tools/validate_assurance.py",
+        "python3 -m unittest discover -s tests -v",
+    ):
+        if command not in text:
+            fail(f"continuous-assurance workflow command missing: {command}")
+
 
 def validate_hygiene(files: list[Path]) -> None:
     for path in files:
@@ -286,7 +316,7 @@ def validate_hygiene(files: list[Path]) -> None:
 def main() -> None:
     files = repository_files()
 
-    for required in (README, CITATION, SOURCE_LOG, SECURITY):
+    for required in (README, CITATION, SOURCE_LOG, SECURITY, *ASSURANCE_REQUIRED):
         if not required.is_file():
             fail(f"required file is missing: {required.relative_to(ROOT)}")
 

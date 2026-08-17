@@ -1,0 +1,387 @@
+{
+  "change_impact": {
+    "affected_claim_ids": [],
+    "affected_evidence_ids": [],
+    "affected_invariant_ids": [],
+    "change_id": "change.none",
+    "changed_elements": [],
+    "disposition": "NO_IMPACT",
+    "prior_config_id": "cfg-sic-001-r1",
+    "proposed_config_id": "cfg-sic-001-r1",
+    "rationale": "Reference bundle represents the current authorized configuration.",
+    "schema_version": "1.0.0",
+    "system_id": "sic-001"
+  },
+  "configuration_passport": {
+    "architecture_version": "synthetic-architecture-1",
+    "authority_refs": [
+      "authority.ops-001"
+    ],
+    "authorized_flow_digest": "sha256:8edff41a6ce3daf6cd7f636a22e7e4cc488448c71b509bf1b98535626f27e420",
+    "config_id": "cfg-sic-001-r1",
+    "evidence_manifest_digest": "sha256:2f3064b93edcd6b156ae18b1460729b5d42a160d2ad8ba014bdca8afc279eef5",
+    "firmware_software_model_ids": [
+      "synthetic-fw-1",
+      "synthetic-runtime-1",
+      "synthetic-model-1"
+    ],
+    "governance_decision_id": "decision.synthetic.001",
+    "hardware_ids": [
+      "synthetic-hw-001"
+    ],
+    "realm_model_digest": "sha256:0e870f83263b63e186a6a903ba99f7b346667c9a9e5605ea45ef29bde59f9a60",
+    "recovery_basis_id": "recovery-basis-r1",
+    "reference_data_ids": [
+      "synthetic-reference-data-1"
+    ],
+    "schema_version": "1.0.0",
+    "supersedes": null,
+    "system_id": "sic-001",
+    "valid_from": "2026-08-17T00:00:00Z",
+    "valid_until": "2027-08-17T00:00:00Z"
+  },
+  "evaluation_time": "2026-08-17T12:00:00Z",
+  "evidence_artifacts": [
+    {
+      "artifact_digest": "sha256:7afa3aa4e495cdea80214fde6f2324c97d8dab218f096cbe423674b17dd9d898",
+      "assumptions": [
+        "No real-system inference is made."
+      ],
+      "authority": "reviewer.synthetic",
+      "claim_ids": [
+        "claim.p1"
+      ],
+      "configuration_id": "cfg-sic-001-r1",
+      "dependencies": [
+        "cfg-sic-001-r1"
+      ],
+      "evidence_id": "evidence.p1",
+      "independence_level": "PEER_REVIEW",
+      "invalidation_triggers": [
+        "configuration change",
+        "authority revocation",
+        "evidence expiry"
+      ],
+      "method": "Reference verification method P1",
+      "observed_at": "2026-08-17T00:00:00Z",
+      "provenance": "Synthetic reference evidence generated for repository validation.",
+      "result": "PASS",
+      "schema_version": "1.0.0",
+      "state": "CURRENT",
+      "valid_until": "2027-08-17T00:00:00Z"
+    },
+    {
+      "artifact_digest": "sha256:cb1b6666672761db511485ce362e7ae37176d92b05e78bf539a1dd9dda4a28c2",
+      "assumptions": [
+        "No real-system inference is made."
+      ],
+      "authority": "reviewer.synthetic",
+      "claim_ids": [
+        "claim.p2"
+      ],
+      "configuration_id": "cfg-sic-001-r1",
+      "dependencies": [
+        "cfg-sic-001-r1"
+      ],
+      "evidence_id": "evidence.p2",
+      "independence_level": "PEER_REVIEW",
+      "invalidation_triggers": [
+        "configuration change",
+        "authority revocation",
+        "evidence expiry"
+      ],
+      "method": "Reference verification method P2",
+      "observed_at": "2026-08-17T00:00:00Z",
+      "provenance": "Synthetic reference evidence generated for repository validation.",
+      "result": "PASS",
+      "schema_version": "1.0.0",
+      "state": "CURRENT",
+      "valid_until": "2027-08-17T00:00:00Z"
+    },
+    {
+      "artifact_digest": "sha256:074d74fc096c453afba2f336c07ec5c1932c590e87734a60c22e52b38cce03b1",
+      "assumptions": [
+        "No real-system inference is made."
+      ],
+      "authority": "reviewer.synthetic",
+      "claim_ids": [
+        "claim.p3"
+      ],
+      "configuration_id": "cfg-sic-001-r1",
+      "dependencies": [
+        "cfg-sic-001-r1"
+      ],
+      "evidence_id": "evidence.p3",
+      "independence_level": "PEER_REVIEW",
+      "invalidation_triggers": [
+        "configuration change",
+        "authority revocation",
+        "evidence expiry"
+      ],
+      "method": "Reference verification method P3",
+      "observed_at": "2026-08-17T00:00:00Z",
+      "provenance": "Synthetic reference evidence generated for repository validation.",
+      "result": "PASS",
+      "schema_version": "1.0.0",
+      "state": "CURRENT",
+      "valid_until": "2027-08-17T00:00:00Z"
+    },
+    {
+      "artifact_digest": "sha256:7a439905a4c0888497fdc9f5629f1b234f00a8df60fe38b2375af70c06fc5bac",
+      "assumptions": [
+        "No real-system inference is made."
+      ],
+      "authority": "reviewer.synthetic",
+      "claim_ids": [
+        "claim.p4"
+      ],
+      "configuration_id": "cfg-sic-001-r1",
+      "dependencies": [
+        "cfg-sic-001-r1"
+      ],
+      "evidence_id": "evidence.p4",
+      "independence_level": "PEER_REVIEW",
+      "invalidation_triggers": [
+        "configuration change",
+        "authority revocation",
+        "evidence expiry"
+      ],
+      "method": "Reference verification method P4",
+      "observed_at": "2026-08-17T00:00:00Z",
+      "provenance": "Synthetic reference evidence generated for repository validation.",
+      "result": "PASS",
+      "schema_version": "1.0.0",
+      "state": "CURRENT",
+      "valid_until": "2027-08-17T00:00:00Z"
+    },
+    {
+      "artifact_digest": "sha256:a15bb06e1497ceb4d785a91771cd69fe6ebac2447a2a382695d910ff570e98ad",
+      "assumptions": [
+        "No real-system inference is made."
+      ],
+      "authority": "reviewer.synthetic",
+      "claim_ids": [
+        "claim.p5"
+      ],
+      "configuration_id": "cfg-sic-001-r1",
+      "dependencies": [
+        "cfg-sic-001-r1"
+      ],
+      "evidence_id": "evidence.p5",
+      "independence_level": "PEER_REVIEW",
+      "invalidation_triggers": [
+        "configuration change",
+        "authority revocation",
+        "evidence expiry"
+      ],
+      "method": "Reference verification method P5",
+      "observed_at": "2026-08-17T00:00:00Z",
+      "provenance": "Synthetic reference evidence generated for repository validation.",
+      "result": "PASS",
+      "schema_version": "1.0.0",
+      "state": "CURRENT",
+      "valid_until": "2027-08-17T00:00:00Z"
+    }
+  ],
+  "expected_decision": "PERMITTED",
+  "operating_disposition": {
+    "authority_refs": [
+      "authority.ops-001"
+    ],
+    "authority_state": "VALID",
+    "config_id": "cfg-sic-001-r1",
+    "disposition_id": "disposition.synthetic.001",
+    "evidence_ids": [
+      "evidence.p1",
+      "evidence.p2",
+      "evidence.p3",
+      "evidence.p4",
+      "evidence.p5"
+    ],
+    "issued_at": "2026-08-17T00:00:00Z",
+    "reasons": [
+      "All synthetic reference conditions are current."
+    ],
+    "retirement_complete": false,
+    "schema_version": "1.0.0",
+    "state": "PERMITTED",
+    "system_id": "sic-001"
+  },
+  "schema_version": "1.0.0",
+  "security_invariants": [
+    {
+      "authorized_transactions": [
+        {
+          "allowed_states": [
+            "PERMITTED"
+          ],
+          "authority_ref": "authority.ops-001",
+          "destination_realm": "inference",
+          "endpoint": "/bounded-inference",
+          "max_bytes": 65536,
+          "message_type": "inference-request",
+          "rate_per_minute": 60,
+          "source_realm": "request"
+        }
+      ],
+      "claim_ids": [
+        "claim.p1"
+      ],
+      "enforcement_boundary": "synthetic-p1-boundary",
+      "fail_behavior": "FAIL_CLOSED",
+      "invariant_id": "invariant.p1",
+      "property_id": "P1",
+      "protected_property": "Cross-boundary flow containment",
+      "schema_version": "1.0.0",
+      "statement": "Cross-boundary flow containment remains true for the authorized configuration.",
+      "verification_methods": [
+        "synthetic verification method for P1"
+      ]
+    },
+    {
+      "authorized_transactions": [],
+      "claim_ids": [
+        "claim.p2"
+      ],
+      "enforcement_boundary": "synthetic-p2-boundary",
+      "fail_behavior": "FAIL_CLOSED",
+      "invariant_id": "invariant.p2",
+      "property_id": "P2",
+      "protected_property": "Computational-state confidentiality",
+      "schema_version": "1.0.0",
+      "statement": "Computational-state confidentiality remains true for the authorized configuration.",
+      "verification_methods": [
+        "synthetic verification method for P2"
+      ]
+    },
+    {
+      "authorized_transactions": [],
+      "claim_ids": [
+        "claim.p3"
+      ],
+      "enforcement_boundary": "synthetic-p3-boundary",
+      "fail_behavior": "FAIL_CLOSED",
+      "invariant_id": "invariant.p3",
+      "property_id": "P3",
+      "protected_property": "Integrity of inference",
+      "schema_version": "1.0.0",
+      "statement": "Integrity of inference remains true for the authorized configuration.",
+      "verification_methods": [
+        "synthetic verification method for P3"
+      ]
+    },
+    {
+      "authorized_transactions": [],
+      "claim_ids": [
+        "claim.p4"
+      ],
+      "enforcement_boundary": "synthetic-p4-boundary",
+      "fail_behavior": "FAIL_CLOSED",
+      "invariant_id": "invariant.p4",
+      "property_id": "P4",
+      "protected_property": "Assured recovery",
+      "schema_version": "1.0.0",
+      "statement": "Assured recovery remains true for the authorized configuration.",
+      "verification_methods": [
+        "synthetic verification method for P4"
+      ]
+    },
+    {
+      "authorized_transactions": [],
+      "claim_ids": [
+        "claim.p5"
+      ],
+      "enforcement_boundary": "synthetic-p5-boundary",
+      "fail_behavior": "FAIL_CLOSED",
+      "invariant_id": "invariant.p5",
+      "property_id": "P5",
+      "protected_property": "Cross-realm privilege separation",
+      "schema_version": "1.0.0",
+      "statement": "Cross-realm privilege separation remains true for the authorized configuration.",
+      "verification_methods": [
+        "synthetic verification method for P5"
+      ]
+    }
+  ],
+  "system_claims": [
+    {
+      "assumptions": [
+        "Synthetic reference environment only."
+      ],
+      "claim_id": "claim.p1",
+      "criticality": "MISSION_CRITICAL",
+      "evidence_ids": [
+        "evidence.p1"
+      ],
+      "schema_version": "1.0.0",
+      "statement": "Only explicitly authorized cross-realm transactions are permitted.",
+      "status": "SUPPORTED",
+      "system_id": "sic-001"
+    },
+    {
+      "assumptions": [
+        "Synthetic reference environment only."
+      ],
+      "claim_id": "claim.p2",
+      "criticality": "MISSION_CRITICAL",
+      "evidence_ids": [
+        "evidence.p2"
+      ],
+      "schema_version": "1.0.0",
+      "statement": "Sensitive computational state remains confined to authorized realms.",
+      "status": "SUPPORTED",
+      "system_id": "sic-001"
+    },
+    {
+      "assumptions": [
+        "Synthetic reference environment only."
+      ],
+      "claim_id": "claim.p3",
+      "criticality": "MISSION_CRITICAL",
+      "evidence_ids": [
+        "evidence.p3"
+      ],
+      "schema_version": "1.0.0",
+      "statement": "Inference execution remains bound to the authorized model, runtime, reference data, and configuration.",
+      "status": "SUPPORTED",
+      "system_id": "sic-001"
+    },
+    {
+      "assumptions": [
+        "Synthetic reference environment only."
+      ],
+      "claim_id": "claim.p4",
+      "criticality": "MISSION_CRITICAL",
+      "evidence_ids": [
+        "evidence.p4"
+      ],
+      "schema_version": "1.0.0",
+      "statement": "Recovery returns the system to a named trusted basis before reauthorization.",
+      "status": "SUPPORTED",
+      "system_id": "sic-001"
+    },
+    {
+      "assumptions": [
+        "Synthetic reference environment only."
+      ],
+      "claim_id": "claim.p5",
+      "criticality": "MISSION_CRITICAL",
+      "evidence_ids": [
+        "evidence.p5"
+      ],
+      "schema_version": "1.0.0",
+      "statement": "Privileged authority is separated across realms and cannot silently collapse into universal privilege.",
+      "status": "SUPPORTED",
+      "system_id": "sic-001"
+    }
+  ],
+  "transaction_request": {
+    "authority_ref": "authority.ops-001",
+    "bytes": 1024,
+    "destination_realm": "inference",
+    "endpoint": "/bounded-inference",
+    "message_type": "inference-request",
+    "rate_per_minute": 1,
+    "source_realm": "request"
+  }
+}
