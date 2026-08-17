@@ -1,0 +1,80 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/change-impact.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "affected_claim_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "affected_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "affected_invariant_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "change_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "changed_elements": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "disposition": {
+      "enum": [
+        "NO_IMPACT",
+        "REVERIFICATION_REQUIRED",
+        "REAUTHORIZATION_REQUIRED",
+        "RETIREMENT_REQUIRED"
+      ]
+    },
+    "prior_config_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "proposed_config_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "rationale": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "system_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "change_id",
+    "system_id",
+    "prior_config_id",
+    "proposed_config_id",
+    "changed_elements",
+    "affected_claim_ids",
+    "affected_invariant_ids",
+    "affected_evidence_ids",
+    "disposition",
+    "rationale"
+  ],
+  "title": "Change Impact",
+  "type": "object"
+}

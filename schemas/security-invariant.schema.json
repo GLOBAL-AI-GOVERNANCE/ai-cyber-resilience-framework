@@ -1,0 +1,115 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/security-invariant.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authorized_transactions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "allowed_states": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "authority_ref": {
+            "type": "string"
+          },
+          "destination_realm": {
+            "type": "string"
+          },
+          "endpoint": {
+            "type": "string"
+          },
+          "max_bytes": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "message_type": {
+            "type": "string"
+          },
+          "rate_per_minute": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "source_realm": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_realm",
+          "destination_realm",
+          "message_type",
+          "endpoint",
+          "max_bytes",
+          "rate_per_minute",
+          "authority_ref",
+          "allowed_states"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "claim_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "enforcement_boundary": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "fail_behavior": {
+      "const": "FAIL_CLOSED"
+    },
+    "invariant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "property_id": {
+      "enum": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    "protected_property": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "statement": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "verification_methods": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "invariant_id",
+    "property_id",
+    "claim_ids",
+    "statement",
+    "protected_property",
+    "enforcement_boundary",
+    "fail_behavior",
+    "verification_methods",
+    "authorized_transactions"
+  ],
+  "title": "Security Invariant",
+  "type": "object"
+}

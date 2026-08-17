@@ -1,0 +1,85 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/operating-disposition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authority_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "authority_state": {
+      "enum": [
+        "VALID",
+        "REVOKED",
+        "EXPIRED"
+      ]
+    },
+    "config_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "disposition_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "issued_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "reasons": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "retirement_complete": {
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "state": {
+      "enum": [
+        "UNESTABLISHED",
+        "TRUST_ESTABLISHMENT",
+        "AUTHORIZED",
+        "PERMITTED",
+        "DEGRADED",
+        "CONTAINED",
+        "INVESTIGATION",
+        "RECOVERY_PENDING",
+        "RECONSTITUTION",
+        "REVERIFICATION",
+        "REAUTHORIZATION_REQUIRED",
+        "RETIRED"
+      ]
+    },
+    "system_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "disposition_id",
+    "system_id",
+    "config_id",
+    "issued_at",
+    "state",
+    "reasons",
+    "authority_refs",
+    "authority_state",
+    "evidence_ids",
+    "retirement_complete"
+  ],
+  "title": "Operating Disposition",
+  "type": "object"
+}

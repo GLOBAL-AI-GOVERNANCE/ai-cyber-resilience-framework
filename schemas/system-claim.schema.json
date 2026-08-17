@@ -1,0 +1,64 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/system-claim.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "claim_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "criticality": {
+      "enum": [
+        "LOW",
+        "MODERATE",
+        "HIGH",
+        "MISSION_CRITICAL"
+      ]
+    },
+    "evidence_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "statement": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ASSERTED",
+        "SUPPORTED",
+        "CHALLENGED",
+        "WITHDRAWN"
+      ]
+    },
+    "system_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "claim_id",
+    "system_id",
+    "statement",
+    "criticality",
+    "evidence_ids",
+    "status",
+    "assumptions"
+  ],
+  "title": "System Claim",
+  "type": "object"
+}
