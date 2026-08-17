@@ -22,3 +22,11 @@ jobs:
       - name: Validate public framework
         run: |
           python3 -B tools/validate_framework.py
+
+      - name: Validate continuous assurance reference
+        run: |
+          python3 -B tools/validate_assurance.py examples/secure-inference-cell/reference-bundle.json
+
+      - name: Run continuous assurance regressions
+        run: |
+          python3 -m unittest discover -s tests -v

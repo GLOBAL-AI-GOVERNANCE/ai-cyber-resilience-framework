@@ -1,0 +1,113 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/evidence-artifact.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_digest": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "authority": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "claim_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "configuration_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "dependencies": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidence_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "independence_level": {
+      "enum": [
+        "SELF_CHECK",
+        "PEER_REVIEW",
+        "INDEPENDENT_REVIEW",
+        "INDEPENDENT_TEST"
+      ]
+    },
+    "invalidation_triggers": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "method": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "observed_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "provenance": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "INCONCLUSIVE"
+      ]
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "state": {
+      "enum": [
+        "CURRENT",
+        "STALE",
+        "SUPERSEDED",
+        "ASSUMPTION_INVALID",
+        "CONFIGURATION_MISMATCH",
+        "REVERIFICATION_REQUIRED"
+      ]
+    },
+    "valid_until": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "claim_ids",
+    "artifact_digest",
+    "configuration_id",
+    "provenance",
+    "method",
+    "authority",
+    "observed_at",
+    "valid_until",
+    "assumptions",
+    "dependencies",
+    "invalidation_triggers",
+    "independence_level",
+    "result",
+    "state"
+  ],
+  "title": "Evidence Artifact",
+  "type": "object"
+}

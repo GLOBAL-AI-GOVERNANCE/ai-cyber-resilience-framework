@@ -55,6 +55,21 @@ This framework does not govern AI model development directly. It supports govern
 * `docs/public-safe-claims.md`
 * `docs/sources-and-evidence.md`
 
+### Continuous Assurance — v0.2.0 Development Candidate
+
+* `docs/continuous-assurance-thread.md`
+* `docs/lifecycle-assurance-thread.md`
+* `docs/protective-state-model.md`
+* `docs/trusted-setup-and-recovery.md`
+* `docs/change-and-reauthorization.md`
+* `docs/secure-ai-infrastructure-application.md`
+* `schemas/` — machine-readable claim, invariant, evidence, configuration, change-impact, and operating-disposition contracts
+* `examples/secure-inference-cell/reference-bundle.json`
+* `tools/validate_assurance.py`
+* `tests/test_continuous_assurance.py`
+
+This candidate adds configuration-bound continuous-assurance semantics without claiming a v0.2.0 release. Current published release identity remains v0.1.1 until a separate reviewed release gate.
+
 ### Checklists
 
 * `checklists/ai-compressed-readiness-checklist.md`
@@ -156,6 +171,26 @@ For one authorized system boundary, the intended finished package is:
 - Named human owners for decisions, testing, exceptions, and follow-through
 
 This package supports architecture review and decision-making. It is not proof that controls are implemented or effective until qualified people validate the supplied evidence and test the actual environment.
+
+---
+
+## Continuous Assurance Thread
+
+For high-consequence systems where claims must survive change and recovery, use the v0.2.0 development candidate:
+
+```text
+Claim → Invariant → Configuration → Evidence → Verification
+→ Operating Disposition → Change / Recovery / Reauthorization
+```
+
+Start with `docs/continuous-assurance-thread.md`, then run:
+
+```bash
+python3 -B tools/validate_assurance.py examples/secure-inference-cell/reference-bundle.json
+python3 -m unittest discover -s tests -v
+```
+
+The evaluator fails closed for unsupported schema versions, unknown flows, revoked authority, stale or mismatched evidence, incomplete P1–P5 invariants, and incomplete retirement. These are reference-model checks, not proof of a deployed system.
 
 ---
 

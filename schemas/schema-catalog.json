@@ -1,0 +1,29 @@
+{
+  "entries": [
+    {
+      "content_sha256": "703d4d28e5c3623ff05a284ecddf6d7b586c16e6e1530951b37ca5d82cad0991",
+      "schema_file": "schemas/change-impact.schema.json"
+    },
+    {
+      "content_sha256": "83f248677c115247c6fc50ccf146b03b9b8c81739fb7a9c9a7b96f737011fa8f",
+      "schema_file": "schemas/configuration-passport.schema.json"
+    },
+    {
+      "content_sha256": "7c25acf7cc01ae5943c5b6a4018b0f769ae18255a6b95180a955429ee6abce8d",
+      "schema_file": "schemas/evidence-artifact.schema.json"
+    },
+    {
+      "content_sha256": "11a7ca377352e6ff6addb48551dfe61ea502c729842908a2a6aee3fb997e4898",
+      "schema_file": "schemas/operating-disposition.schema.json"
+    },
+    {
+      "content_sha256": "ff8d9fd50b1e00bfac25f3c546f8d6659c871156b6740164a1a9e0d603845647",
+      "schema_file": "schemas/security-invariant.schema.json"
+    },
+    {
+      "content_sha256": "44c9ed86e421a4054cfc6f58fbd433cca7e130bcbab8015115ae01f9b37302c5",
+      "schema_file": "schemas/system-claim.schema.json"
+    }
+  ],
+  "schema_version": "1.0.0"
+}
