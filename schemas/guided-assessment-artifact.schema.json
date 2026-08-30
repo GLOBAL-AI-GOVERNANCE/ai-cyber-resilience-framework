@@ -1,0 +1,36 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/guided-assessment-artifact.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assessment_id": {"minLength": 1, "type": "string"},
+    "assessment_time": {"format": "date-time", "type": "string"},
+    "authority_effect": {"const": "NONE"},
+    "candidate_version": {"const": "0.2.0-unreleased"},
+    "human_review_required": {"const": true},
+    "limitations": {"items": {"type": "string"}, "minItems": 1, "type": "array"},
+    "overall_state": {"enum": ["HUMAN_EVIDENCE_REVIEW_REQUIRED", "INCOMPLETE_OR_GAPS"]},
+    "results": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence_refs": {"items": {"type": "string"}, "type": "array"},
+          "property_id": {"enum": ["P1", "P2", "P3", "P4", "P5"]},
+          "question": {"minLength": 1, "type": "string"},
+          "response": {"enum": ["YES", "NO", "UNKNOWN"]},
+          "state": {"enum": ["EVIDENCE_REVIEW_REQUIRED", "GAP_IDENTIFIED", "EVIDENCE_MISSING"]}
+        },
+        "required": ["property_id", "question", "response", "evidence_refs", "state"],
+        "type": "object"
+      },
+      "maxItems": 5,
+      "minItems": 5,
+      "type": "array"
+    },
+    "schema_version": {"const": "1.0.0"},
+    "system_id": {"minLength": 1, "type": "string"}
+  },
+  "required": ["schema_version", "candidate_version", "assessment_id", "system_id", "assessment_time", "results", "overall_state", "human_review_required", "authority_effect", "limitations"],
+  "title": "Guided Assessment Artifact",
+  "type": "object"
+}
