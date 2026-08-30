@@ -1,6 +1,10 @@
 {
   "entries": [
     {
+      "content_sha256": "3d5328874072ff32d5cd862b1eaf9621c34ab8b2fa10e6159db0814e37425e50",
+      "schema_file": "schemas/guided-assessment-artifact.schema.json"
+    },
+    {
       "content_sha256": "703d4d28e5c3623ff05a284ecddf6d7b586c16e6e1530951b37ca5d82cad0991",
       "schema_file": "schemas/change-impact.schema.json"
     },

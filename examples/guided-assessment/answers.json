@@ -1,0 +1,12 @@
+{
+  "answers": {
+    "P1": {"evidence_refs": ["evidence/boundary-test-001"], "response": "YES"},
+    "P2": {"evidence_refs": [], "response": "UNKNOWN"},
+    "P3": {"evidence_refs": ["evidence/config-record-001"], "response": "YES"},
+    "P4": {"evidence_refs": [], "response": "NO"},
+    "P5": {"evidence_refs": ["evidence/privilege-review-001"], "response": "YES"}
+  },
+  "assessment_id": "assessment.synthetic.001",
+  "assessment_time": "2026-08-29T12:00:00Z",
+  "system_id": "synthetic-system-001"
+}

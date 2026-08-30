@@ -192,6 +192,16 @@ python3 -m unittest discover -s tests -v
 
 The evaluator fails closed for unsupported schema versions, unknown flows, revoked authority, stale or mismatched evidence, incomplete P1–P5 invariants, and incomplete retirement. These are reference-model checks, not proof of a deployed system.
 
+### Guided assessment — unreleased candidate
+
+The dependency-free guided assessment provides a local `Open → Answer → Assess → Review evidence → Export assurance artifact` path. It does not transmit data or independently validate user-supplied answers or evidence.
+
+```bash
+python3 -B tools/guided_assessment.py --out assessment.json
+```
+
+For deterministic automation, pass `--answers examples/guided-assessment/answers.json`. The schema-backed export always preserves `human_review_required: true` and `authority_effect: NONE`. This is unreleased v0.2.0 candidate functionality, not part of v0.1.1.
+
 ---
 
 ## Full Getting Started Path
