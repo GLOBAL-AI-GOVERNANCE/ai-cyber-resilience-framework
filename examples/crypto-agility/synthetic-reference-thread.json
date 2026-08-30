@@ -1,0 +1,52 @@
+{
+  "artifact_id": "crypto-agility.synthetic.001",
+  "artifact_scope": "OPTIONAL_SYNTHETIC_REFERENCE_ONLY",
+  "candidate_version": "0.2.0-unreleased",
+  "cryptographic_dependency_inventory": [
+    {
+      "dependency_id": "crypto-dependency.synthetic.transport-001",
+      "function": "Synthetic transport confidentiality dependency",
+      "owner_role": "synthetic-system-steward",
+      "replacement_boundary": "synthetic-transport-interface"
+    },
+    {
+      "dependency_id": "crypto-dependency.synthetic.archive-001",
+      "function": "Synthetic archive confidentiality dependency",
+      "owner_role": "synthetic-records-steward",
+      "replacement_boundary": "synthetic-archive-interface"
+    }
+  ],
+  "downgrade_rollback_evidence": [
+    "fixture:downgrade-policy-review-not-performed",
+    "fixture:rollback-test-not-performed"
+  ],
+  "human_release_boundary": {
+    "authority_effect": "NONE",
+    "decision": "NOT_MADE",
+    "human_review_required": true,
+    "release_tag_created": false
+  },
+  "limitations": [
+    "This local fixture is synthetic and does not show that any cryptographic migration, deployment, downgrade test, or rollback test occurred.",
+    "No post-quantum deployment, quantum-safe superiority, cryptographic invulnerability, certification, or measured operational effectiveness is claimed.",
+    "Algorithm and vendor selection remain outside this reference artifact and require authorized human engineering review."
+  ],
+  "long_term_confidentiality_horizon": {
+    "basis": "Synthetic planning assumption requiring human validation against data-retention and threat-model needs.",
+    "review_by": "2027-08-30",
+    "years": 15
+  },
+  "migration_readiness": {
+    "gaps": [
+      "No real dependency discovery has been performed.",
+      "No real transition test evidence is attached."
+    ],
+    "state": "GAPS_IDENTIFIED",
+    "test_plan_refs": ["fixture:synthetic-crypto-transition-plan"]
+  },
+  "schema_version": "1.0.0",
+  "transition_evidence": [
+    "fixture:transition-observation-not-performed",
+    "fixture:interoperability-observation-not-performed"
+  ]
+}

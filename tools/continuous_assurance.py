@@ -36,6 +36,8 @@ DECISION_RANK = {
 
 
 def parse_time(value: str) -> datetime:
+    if not isinstance(value, str):
+        raise ValueError("time value must be a string")
     if value.endswith("Z"):
         value = value[:-1] + "+00:00"
     parsed = datetime.fromisoformat(value)
@@ -93,7 +95,10 @@ def evaluate(bundle: dict[str, Any], at_time: str | None = None) -> tuple[str, l
     invariants = bundle.get("security_invariants", [])
     evidence = bundle.get("evidence_artifacts", [])
 
-    current_time = parse_time(at_time or bundle.get("evaluation_time", "1970-01-01T00:00:00Z"))
+    try:
+        current_time = parse_time(at_time or bundle.get("evaluation_time", "1970-01-01T00:00:00Z"))
+    except (TypeError, ValueError):
+        return "FAIL_CLOSED", ["invalid evaluation time"]
 
     for artifact_group in (claims, invariants, evidence, [passport, change, disposition]):
         for artifact in artifact_group:
@@ -114,7 +119,7 @@ def evaluate(bundle: dict[str, Any], at_time: str | None = None) -> tuple[str, l
         if not (parse_time(passport["valid_from"]) <= current_time <= parse_time(passport["valid_until"])):
             decision = _stronger(decision, "REAUTHORIZATION_REQUIRED")
             reasons.append("configuration passport outside validity window")
-    except (KeyError, ValueError):
+    except (KeyError, TypeError, ValueError):
         return "FAIL_CLOSED", ["invalid configuration validity interval"]
 
     if disposition.get("authority_state") != "VALID":
@@ -128,7 +133,26 @@ def evaluate(bundle: dict[str, Any], at_time: str | None = None) -> tuple[str, l
     evidence_by_id = {item.get("evidence_id"): item for item in evidence}
     claim_ids = {item.get("claim_id") for item in claims}
 
+    identifier_sets = (
+        ("claim", [item.get("claim_id") for item in claims]),
+        ("invariant", [item.get("invariant_id") for item in invariants]),
+        ("evidence", [item.get("evidence_id") for item in evidence]),
+    )
+    for label, identifiers in identifier_sets:
+        if any(not identifier for identifier in identifiers) or len(identifiers) != len(set(identifiers)):
+            return "FAIL_CLOSED", [f"missing or duplicate {label} identifier"]
+
+    system_id = passport.get("system_id")
+    if not system_id or any(
+        artifact.get("system_id") != system_id
+        for artifact in [*claims, change, disposition]
+    ):
+        return "FAIL_CLOSED", ["system identifier mismatch"]
+
     for item in claims:
+        if item.get("status") != "SUPPORTED":
+            decision = _stronger(decision, "INCOMPLETE")
+            reasons.append(f"claim {item.get('claim_id')} is not supported")
         for evidence_id in item.get("evidence_ids", []):
             if evidence_id not in evidence_by_id:
                 decision = _stronger(decision, "INCOMPLETE")
@@ -146,12 +170,22 @@ def evaluate(bundle: dict[str, Any], at_time: str | None = None) -> tuple[str, l
             decision = _stronger(decision, "REVERIFICATION_REQUIRED")
             reasons.append(f"evidence {item.get('evidence_id')} is {item.get('state')}")
             continue
+        if item.get("result") != "PASS":
+            decision = _stronger(decision, "REVERIFICATION_REQUIRED")
+            reasons.append(f"evidence {item.get('evidence_id')} result is not PASS")
         try:
             if current_time > parse_time(item["valid_until"]):
                 decision = _stronger(decision, "REVERIFICATION_REQUIRED")
                 reasons.append(f"evidence {item.get('evidence_id')} expired")
-        except (KeyError, ValueError):
+        except (KeyError, TypeError, ValueError):
             return "FAIL_CLOSED", [f"invalid evidence time for {item.get('evidence_id')}"]
+
+    disposition_evidence = disposition.get("evidence_ids", [])
+    if len(disposition_evidence) != len(set(disposition_evidence)) or any(
+        evidence_id not in evidence_by_id for evidence_id in disposition_evidence
+    ):
+        decision = _stronger(decision, "INCOMPLETE")
+        reasons.append("operating disposition has missing or duplicate evidence references")
 
     change_state = change.get("disposition")
     if change_state == "REVERIFICATION_REQUIRED":

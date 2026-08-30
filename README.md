@@ -67,8 +67,11 @@ This framework does not govern AI model development directly. It supports govern
 * `examples/secure-inference-cell/reference-bundle.json`
 * `tools/validate_assurance.py`
 * `tests/test_continuous_assurance.py`
+* `docs/quantum-era-crypto-agility-reference-thread.md` - optional synthetic assurance/reference thread
 
 This candidate adds configuration-bound continuous-assurance semantics without claiming a v0.2.0 release. Current published release identity remains v0.1.1 until a separate reviewed release gate.
+
+Machine-only readiness evidence is recorded in `docs/release-readiness-v0.2.0-machine.md`. That record is not a release decision. No v0.2.0 tag or release has been made.
 
 ### Checklists
 

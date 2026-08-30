@@ -30,6 +30,10 @@ ASSURANCE_REQUIRED = (
     ROOT / "tests" / "test_continuous_assurance.py",
     ROOT / "tests" / "test_guided_assessment.py",
     ROOT / "schemas" / "guided-assessment-artifact.schema.json",
+    ROOT / "schemas" / "crypto-agility-thread.schema.json",
+    ROOT / "docs" / "quantum-era-crypto-agility-reference-thread.md",
+    ROOT / "examples" / "crypto-agility" / "synthetic-reference-thread.json",
+    ROOT / "docs" / "release-readiness-v0.2.0-machine.md",
 )
 
 OLD_NAME = "AI-Compressed Cyber Defense Framework"
