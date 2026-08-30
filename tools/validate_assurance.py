@@ -17,6 +17,11 @@ CATALOG = ROOT / "schemas" / "schema-catalog.json"
 DIGEST = re.compile(r"^sha256:[0-9a-f]{64}$")
 
 REQUIRED = {
+    "guided-assessment-artifact.schema.json": {
+        "schema_version", "candidate_version", "assessment_id", "system_id",
+        "assessment_time", "results", "overall_state", "human_review_required",
+        "authority_effect", "limitations",
+    },
     "system-claim.schema.json": {
         "schema_version", "claim_id", "system_id", "statement", "criticality",
         "evidence_ids", "status", "assumptions",
@@ -69,7 +74,8 @@ def check_schema_catalog() -> None:
         path = ROOT / rel
         if not path.is_file():
             fail(f"catalog path missing: {rel}")
-        actual = hashlib.sha256(path.read_bytes()).hexdigest()
+        content = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+        actual = hashlib.sha256(content).hexdigest()
         if actual != entry.get("content_sha256"):
             fail(f"schema digest mismatch: {rel}")
         names.add(path.name)

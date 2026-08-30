@@ -26,7 +26,10 @@ ASSURANCE_REQUIRED = (
     ROOT / "examples" / "secure-inference-cell" / "reference-bundle.json",
     ROOT / "tools" / "continuous_assurance.py",
     ROOT / "tools" / "validate_assurance.py",
+    ROOT / "tools" / "guided_assessment.py",
     ROOT / "tests" / "test_continuous_assurance.py",
+    ROOT / "tests" / "test_guided_assessment.py",
+    ROOT / "schemas" / "guided-assessment-artifact.schema.json",
 )
 
 OLD_NAME = "AI-Compressed Cyber Defense Framework"

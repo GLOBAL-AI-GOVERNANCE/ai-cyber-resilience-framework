@@ -9,6 +9,7 @@
 - Added a protective-state model that prevents recovery from silently returning directly to permitted operation.
 - Added a synthetic secure-inference-cell reference bundle and fail-closed evaluator.
 - Added adversarial regression tests for unknown flows, evidence expiry, configuration mismatch, revoked authority, missing P1–P5 properties, unsupported schemas, superseded evidence, reauthorization, and incomplete retirement.
+- Added a dependency-free local guided-assessment path with a deterministic, schema-backed, non-authorizing assurance artifact.
 - This section describes merged development work only; it does not declare a v0.2.0 release.
 
 ## v0.1.1 — Public Identity and Verification
