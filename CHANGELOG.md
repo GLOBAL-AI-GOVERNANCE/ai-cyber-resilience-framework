@@ -10,6 +10,8 @@
 - Added a synthetic secure-inference-cell reference bundle and fail-closed evaluator.
 - Added adversarial regression tests for unknown flows, evidence expiry, configuration mismatch, revoked authority, missing P1–P5 properties, unsupported schemas, superseded evidence, reauthorization, and incomplete retirement.
 - Added a dependency-free local guided-assessment path with a deterministic, schema-backed, non-authorizing assurance artifact.
+- Added an optional synthetic quantum-era cryptographic resilience / crypto-agility reference thread with an explicit human release boundary; it does not evidence a real migration or deployment.
+- Added a public-safe machine-only release-readiness record and strengthened deterministic consistency regressions for duplicate identifiers, evidence results, disposition references, system identity, and malformed times.
 - This section describes merged development work only; it does not declare a v0.2.0 release.
 
 ## v0.1.1 — Public Identity and Verification

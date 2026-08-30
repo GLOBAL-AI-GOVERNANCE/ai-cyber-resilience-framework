@@ -17,6 +17,12 @@ CATALOG = ROOT / "schemas" / "schema-catalog.json"
 DIGEST = re.compile(r"^sha256:[0-9a-f]{64}$")
 
 REQUIRED = {
+    "crypto-agility-thread.schema.json": {
+        "schema_version", "candidate_version", "artifact_id", "artifact_scope",
+        "cryptographic_dependency_inventory", "long_term_confidentiality_horizon",
+        "migration_readiness", "downgrade_rollback_evidence",
+        "transition_evidence", "human_release_boundary", "limitations",
+    },
     "guided-assessment-artifact.schema.json": {
         "schema_version", "candidate_version", "assessment_id", "system_id",
         "assessment_time", "results", "overall_state", "human_review_required",
@@ -93,6 +99,37 @@ def require_keys(obj: dict[str, Any], keys: set[str], label: str) -> None:
     if missing:
         fail(f"{label} missing keys: {', '.join(missing)}")
 
+def check_crypto_agility_thread() -> None:
+    path = ROOT / "examples" / "crypto-agility" / "synthetic-reference-thread.json"
+    artifact = read_json(path)
+    require_keys(artifact, REQUIRED["crypto-agility-thread.schema.json"], "crypto-agility thread")
+    if artifact.get("schema_version") != "1.0.0" or artifact.get("candidate_version") != "0.2.0-unreleased":
+        fail("crypto-agility thread version boundary mismatch")
+    if artifact.get("artifact_scope") != "OPTIONAL_SYNTHETIC_REFERENCE_ONLY":
+        fail("crypto-agility thread is not explicitly synthetic reference-only")
+    dependencies = artifact.get("cryptographic_dependency_inventory", [])
+    dependency_ids = [item.get("dependency_id") for item in dependencies]
+    if not dependency_ids or any(not item for item in dependency_ids) or len(dependency_ids) != len(set(dependency_ids)):
+        fail("crypto-agility dependency inventory is empty or has invalid identifiers")
+    for item in dependencies:
+        require_keys(item, {"dependency_id", "function", "owner_role", "replacement_boundary"}, "crypto dependency")
+    horizon = artifact.get("long_term_confidentiality_horizon", {})
+    require_keys(horizon, {"years", "basis", "review_by"}, "confidentiality horizon")
+    readiness = artifact.get("migration_readiness", {})
+    require_keys(readiness, {"state", "test_plan_refs", "gaps"}, "migration readiness")
+    for field in ("downgrade_rollback_evidence", "transition_evidence", "limitations"):
+        if not artifact.get(field):
+            fail(f"crypto-agility thread has empty {field}")
+    boundary = artifact.get("human_release_boundary", {})
+    expected_boundary = {
+        "human_review_required": True,
+        "authority_effect": "NONE",
+        "decision": "NOT_MADE",
+        "release_tag_created": False,
+    }
+    if boundary != expected_boundary:
+        fail("crypto-agility human release boundary is not closed")
+
 def check_bundle(bundle: dict[str, Any]) -> None:
     if bundle.get("schema_version") != "1.0.0":
         fail("reference bundle schema version unsupported")
@@ -122,6 +159,7 @@ def main() -> None:
     if not bundle_path.is_absolute():
         bundle_path = ROOT / bundle_path
     check_schema_catalog()
+    check_crypto_agility_thread()
     bundle = read_json(bundle_path)
     check_bundle(bundle)
     decision, reasons = evaluate(bundle)

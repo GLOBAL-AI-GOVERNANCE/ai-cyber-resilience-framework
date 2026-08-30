@@ -1,6 +1,10 @@
 {
   "entries": [
     {
+      "content_sha256": "d3d71d67ca7073e71e0d89ddc122efa3ffa407d7d0af59b24943d4500bbb79e4",
+      "schema_file": "schemas/crypto-agility-thread.schema.json"
+    },
+    {
       "content_sha256": "3d5328874072ff32d5cd862b1eaf9621c34ab8b2fa10e6159db0814e37425e50",
       "schema_file": "schemas/guided-assessment-artifact.schema.json"
     },

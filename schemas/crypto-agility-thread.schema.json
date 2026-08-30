@@ -1,0 +1,74 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/crypto-agility-thread.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {"minLength": 1, "type": "string"},
+    "artifact_scope": {"const": "OPTIONAL_SYNTHETIC_REFERENCE_ONLY"},
+    "candidate_version": {"const": "0.2.0-unreleased"},
+    "cryptographic_dependency_inventory": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "dependency_id": {"minLength": 1, "type": "string"},
+          "function": {"minLength": 1, "type": "string"},
+          "owner_role": {"minLength": 1, "type": "string"},
+          "replacement_boundary": {"minLength": 1, "type": "string"}
+        },
+        "required": ["dependency_id", "function", "owner_role", "replacement_boundary"],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "downgrade_rollback_evidence": {
+      "items": {"minLength": 1, "type": "string"},
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "human_release_boundary": {
+      "additionalProperties": false,
+      "properties": {
+        "authority_effect": {"const": "NONE"},
+        "decision": {"const": "NOT_MADE"},
+        "human_review_required": {"const": true},
+        "release_tag_created": {"const": false}
+      },
+      "required": ["human_review_required", "authority_effect", "decision", "release_tag_created"],
+      "type": "object"
+    },
+    "limitations": {"items": {"minLength": 1, "type": "string"}, "minItems": 1, "type": "array"},
+    "long_term_confidentiality_horizon": {
+      "additionalProperties": false,
+      "properties": {
+        "basis": {"minLength": 1, "type": "string"},
+        "review_by": {"format": "date", "type": "string"},
+        "years": {"minimum": 0, "type": "integer"}
+      },
+      "required": ["years", "basis", "review_by"],
+      "type": "object"
+    },
+    "migration_readiness": {
+      "additionalProperties": false,
+      "properties": {
+        "gaps": {"items": {"type": "string"}, "type": "array"},
+        "state": {"enum": ["NOT_ASSESSED", "GAPS_IDENTIFIED", "HUMAN_REVIEW_REQUIRED"]},
+        "test_plan_refs": {"items": {"type": "string"}, "type": "array"}
+      },
+      "required": ["state", "test_plan_refs", "gaps"],
+      "type": "object"
+    },
+    "schema_version": {"const": "1.0.0"},
+    "transition_evidence": {"items": {"minLength": 1, "type": "string"}, "minItems": 1, "type": "array", "uniqueItems": true}
+  },
+  "required": [
+    "schema_version", "candidate_version", "artifact_id", "artifact_scope",
+    "cryptographic_dependency_inventory", "long_term_confidentiality_horizon",
+    "migration_readiness", "downgrade_rollback_evidence", "transition_evidence",
+    "human_release_boundary", "limitations"
+  ],
+  "title": "Optional Synthetic Crypto-Agility Reference Thread",
+  "type": "object"
+}

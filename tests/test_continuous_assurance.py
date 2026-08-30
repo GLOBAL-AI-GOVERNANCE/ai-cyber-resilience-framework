@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
 from continuous_assurance import evaluate, transition_allowed  # noqa: E402
+from validate_assurance import check_crypto_agility_thread  # noqa: E402
 
 BASE = json.loads(
     (ROOT / "examples" / "secure-inference-cell" / "reference-bundle.json").read_text(encoding="utf-8")
@@ -22,6 +23,9 @@ class ContinuousAssuranceTests(unittest.TestCase):
     def test_reference_bundle_is_permitted(self):
         decision, _ = evaluate(self.bundle())
         self.assertEqual(decision, "PERMITTED")
+
+    def test_optional_crypto_agility_thread_is_bounded(self):
+        self.assertIsNone(check_crypto_agility_thread())
 
     def test_unknown_flow_fails_closed_to_containment(self):
         data = self.bundle()
@@ -67,6 +71,45 @@ class ContinuousAssuranceTests(unittest.TestCase):
         data["evidence_artifacts"][0]["state"] = "SUPERSEDED"
         decision, _ = evaluate(data)
         self.assertEqual(decision, "REVERIFICATION_REQUIRED")
+
+    def test_failed_evidence_cannot_support_permission(self):
+        data = self.bundle()
+        data["evidence_artifacts"][0]["result"] = "FAIL"
+        decision, reasons = evaluate(data)
+        self.assertEqual(decision, "REVERIFICATION_REQUIRED")
+        self.assertTrue(any("result is not PASS" in reason for reason in reasons))
+
+    def test_duplicate_evidence_identifier_fails_closed(self):
+        data = self.bundle()
+        data["evidence_artifacts"][1]["evidence_id"] = data["evidence_artifacts"][0]["evidence_id"]
+        decision, _ = evaluate(data)
+        self.assertEqual(decision, "FAIL_CLOSED")
+
+    def test_unknown_disposition_evidence_is_incomplete(self):
+        data = self.bundle()
+        data["operating_disposition"]["evidence_ids"].append("evidence.unknown")
+        decision, _ = evaluate(data)
+        self.assertEqual(decision, "INCOMPLETE")
+
+    def test_system_identifier_mismatch_fails_closed(self):
+        data = self.bundle()
+        data["system_claims"][0]["system_id"] = "other-system"
+        decision, _ = evaluate(data)
+        self.assertEqual(decision, "FAIL_CLOSED")
+
+    def test_non_string_time_fails_closed_deterministically(self):
+        data = self.bundle()
+        data["evidence_artifacts"][0]["valid_until"] = None
+        decision, reasons = evaluate(data)
+        self.assertEqual(decision, "FAIL_CLOSED")
+        self.assertEqual(reasons, ["invalid evidence time for evidence.p1"])
+
+    def test_invalid_evaluation_time_fails_closed(self):
+        data = self.bundle()
+        data["evaluation_time"] = "not-a-time"
+        decision, reasons = evaluate(data)
+        self.assertEqual(decision, "FAIL_CLOSED")
+        self.assertEqual(reasons, ["invalid evaluation time"])
 
     def test_change_can_require_reauthorization(self):
         data = self.bundle()
