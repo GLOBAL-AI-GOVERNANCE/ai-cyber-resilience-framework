@@ -10,6 +10,8 @@
 **Status:** Public defensive reference framework for architecture assessment, evidence capture, and hardening planning. It is not executable software, certification, or proof that a control works.
 **License:** Apache 2.0
 
+Start here: [5-Minute Assessment](#start-here-5-minute-assessment)
+
 ---
 
 ## Core Thesis
