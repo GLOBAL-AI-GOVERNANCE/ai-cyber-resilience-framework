@@ -53,7 +53,8 @@
       ],
       "configuration_id": "cfg-sic-001-r1",
       "dependencies": [
-        "cfg-sic-001-r1"
+        "cfg-sic-001-r1",
+        "recovery-basis-r1"
       ],
       "evidence_id": "evidence.p1",
       "independence_level": "PEER_REVIEW",
@@ -81,7 +82,8 @@
       ],
       "configuration_id": "cfg-sic-001-r1",
       "dependencies": [
-        "cfg-sic-001-r1"
+        "cfg-sic-001-r1",
+        "recovery-basis-r1"
       ],
       "evidence_id": "evidence.p2",
       "independence_level": "PEER_REVIEW",
@@ -109,7 +111,8 @@
       ],
       "configuration_id": "cfg-sic-001-r1",
       "dependencies": [
-        "cfg-sic-001-r1"
+        "cfg-sic-001-r1",
+        "recovery-basis-r1"
       ],
       "evidence_id": "evidence.p3",
       "independence_level": "PEER_REVIEW",
@@ -137,7 +140,8 @@
       ],
       "configuration_id": "cfg-sic-001-r1",
       "dependencies": [
-        "cfg-sic-001-r1"
+        "cfg-sic-001-r1",
+        "recovery-basis-r1"
       ],
       "evidence_id": "evidence.p4",
       "independence_level": "PEER_REVIEW",
@@ -165,7 +169,8 @@
       ],
       "configuration_id": "cfg-sic-001-r1",
       "dependencies": [
-        "cfg-sic-001-r1"
+        "cfg-sic-001-r1",
+        "recovery-basis-r1"
       ],
       "evidence_id": "evidence.p5",
       "independence_level": "PEER_REVIEW",
