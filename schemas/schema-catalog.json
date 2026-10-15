@@ -31,6 +31,10 @@
     {
       "content_sha256": "44c9ed86e421a4054cfc6f58fbd433cca7e130bcbab8015115ae01f9b37302c5",
       "schema_file": "schemas/system-claim.schema.json"
+    },
+    {
+      "content_sha256": "f0054fcccd618063016e0f70dce66f148ee87a0c47620a10bb841560423e0e43",
+      "schema_file": "schemas/dependency-exit-evidence.schema.json"
     }
   ],
   "schema_version": "1.0.0"

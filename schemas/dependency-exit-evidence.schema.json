@@ -1,0 +1,41 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/dependency-exit-evidence.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dependency Exit Evidence Record",
+  "description": "Reference-only record of a bounded dependency replacement exercise. JSON Schema validates structure only. Semantic SUCCESS constraints are enforced by the dependency-exit validator, not by schema validity alone. A successful record does not establish supplier independence, operational resilience, production safety, or business continuity.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "1.0.0", "type": "string"},
+    "dependency_id": {"minLength": 1, "type": "string"},
+    "subject_id": {"minLength": 1, "type": "string"},
+    "configuration_digest": {"pattern": "^sha256:[0-9a-f]{64}$", "type": "string"},
+    "dependency_type": {"minLength": 1, "type": "string"},
+    "owner_ref": {"minLength": 1, "type": "string"},
+    "replacement_ref": {"type": "string"},
+    "portability_basis": {"minLength": 1, "type": "string"},
+    "switching_procedure_ref": {"type": "string"},
+    "recovery_basis_ref": {"type": "string"},
+    "exercise_started_at": {"pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$", "type": "string"},
+    "exercise_completed_at": {"pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$", "type": "string"},
+    "observed_switch_time": {"type": "string"},
+    "fallback_available": {"type": "boolean"},
+    "fallback_demonstrated": {"type": "boolean"},
+    "recovery_demonstrated": {"type": "boolean"},
+    "data_or_state_recovered": {"type": "boolean"},
+    "residual_dependencies": {"items": {"minLength": 1, "type": "string"}, "type": "array"},
+    "limitations": {"items": {"minLength": 1, "type": "string"}, "minItems": 1, "type": "array"},
+    "outcome": {"enum": ["SUCCESS", "PARTIAL", "FAILED"], "type": "string"},
+    "evidence_refs": {"items": {"minLength": 1, "type": "string"}, "minItems": 1, "type": "array"},
+    "reference_only": {"const": true, "type": "boolean"},
+    "human_review_required": {"const": true, "type": "boolean"},
+    "authority_effect": {"const": "NONE", "type": "string"}
+  },
+  "required": [
+    "schema_version", "dependency_id", "subject_id", "configuration_digest", "dependency_type", "owner_ref",
+    "replacement_ref", "portability_basis", "switching_procedure_ref", "recovery_basis_ref",
+    "exercise_started_at", "exercise_completed_at", "observed_switch_time", "fallback_available",
+    "fallback_demonstrated", "recovery_demonstrated", "data_or_state_recovered", "residual_dependencies",
+    "limitations", "outcome", "evidence_refs", "reference_only", "human_review_required", "authority_effect"
+  ]
+}

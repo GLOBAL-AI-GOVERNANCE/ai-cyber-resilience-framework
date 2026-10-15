@@ -34,6 +34,10 @@ ASSURANCE_REQUIRED = (
     ROOT / "docs" / "quantum-era-crypto-agility-reference-thread.md",
     ROOT / "examples" / "crypto-agility" / "synthetic-reference-thread.json",
     ROOT / "docs" / "release-readiness-v0.2.0-machine.md",
+    ROOT / "schemas" / "dependency-exit-evidence.schema.json",
+    ROOT / "examples" / "dependency-exit" / "synthetic-exit-record.json",
+    ROOT / "tools" / "validate_dependency_exit.py",
+    ROOT / "tests" / "test_dependency_exit.py",
 )
 
 OLD_NAME = "AI-Compressed Cyber Defense Framework"
