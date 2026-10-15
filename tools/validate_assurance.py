@@ -60,6 +60,15 @@ REQUIRED = {
         "state", "reasons", "authority_refs", "authority_state", "evidence_ids",
         "retirement_complete",
     },
+    "dependency-exit-evidence.schema.json": {
+        "schema_version", "dependency_id", "subject_id", "configuration_digest",
+        "dependency_type", "owner_ref", "replacement_ref", "portability_basis",
+        "switching_procedure_ref", "recovery_basis_ref", "exercise_started_at",
+        "exercise_completed_at", "observed_switch_time", "fallback_available",
+        "fallback_demonstrated", "recovery_demonstrated", "data_or_state_recovered",
+        "residual_dependencies", "limitations", "outcome", "evidence_refs",
+        "reference_only", "human_review_required", "authority_effect",
+    },
 }
 
 def fail(message: str) -> None:
@@ -160,6 +169,11 @@ def main() -> None:
         bundle_path = ROOT / bundle_path
     check_schema_catalog()
     check_crypto_agility_thread()
+    from validate_dependency_exit import validate_dependency_exit
+    sample = read_json(ROOT / "examples" / "dependency-exit" / "synthetic-exit-record.json")
+    exit_result = validate_dependency_exit(sample)
+    if exit_result.get("authority_effect") != "NONE" or exit_result.get("reference_only") is not True:
+        fail("dependency exit record exceeds its reference boundary")
     bundle = read_json(bundle_path)
     check_bundle(bundle)
     decision, reasons = evaluate(bundle)
