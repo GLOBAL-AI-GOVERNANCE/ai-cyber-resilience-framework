@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Validate a dependency exit evidence record. Standard library only. Fail closed."""
+"""Validate a dependency exit evidence record. Standard library only. Fail closed.
+
+JSON Schema establishes the structural contract. This module enforces semantic
+SUCCESS constraints. Schema validity alone does not establish SUCCESS.
+"""
 from __future__ import annotations
 
 import json

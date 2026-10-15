@@ -2,7 +2,7 @@
   "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/schemas/dependency-exit-evidence.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Dependency Exit Evidence Record",
-  "description": "Reference-only record of a bounded dependency replacement exercise. A successful record does not establish supplier independence, operational resilience, production safety, or business continuity.",
+  "description": "Reference-only record of a bounded dependency replacement exercise. JSON Schema validates structure only. Semantic SUCCESS constraints are enforced by the dependency-exit validator, not by schema validity alone. A successful record does not establish supplier independence, operational resilience, production safety, or business continuity.",
   "type": "object",
   "additionalProperties": false,
   "properties": {

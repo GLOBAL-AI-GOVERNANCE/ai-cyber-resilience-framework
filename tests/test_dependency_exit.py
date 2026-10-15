@@ -8,6 +8,7 @@ from tools.validate_dependency_exit import ContractError, validate_dependency_ex
 
 ROOT = Path(__file__).resolve().parents[1]
 SAMPLE = json.loads((ROOT / "examples" / "dependency-exit" / "synthetic-exit-record.json").read_text(encoding="utf-8"))
+FAILED = json.loads((ROOT / "examples" / "dependency-exit" / "synthetic-exit-failed.json").read_text(encoding="utf-8"))
 
 
 class DependencyExitTests(unittest.TestCase):
@@ -15,6 +16,14 @@ class DependencyExitTests(unittest.TestCase):
         result = validate_dependency_exit(SAMPLE)
         self.assertEqual(result["outcome"], "SUCCESS")
         self.assertEqual(result["authority_effect"], "NONE")
+
+    def test_failed_fixture_cannot_become_success(self) -> None:
+        result = validate_dependency_exit(FAILED)
+        self.assertEqual(result["outcome"], "FAILED")
+        self.assertEqual(result["authority_effect"], "NONE")
+        self.assertTrue(result["reference_only"])
+        with self.assertRaises(ContractError):
+            validate_dependency_exit({**FAILED, "outcome": "SUCCESS"})
 
     def test_partial_and_failed_keep_incomplete_state(self) -> None:
         partial = {**SAMPLE, "outcome": "PARTIAL", "recovery_demonstrated": False}

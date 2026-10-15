@@ -33,7 +33,7 @@
       "schema_file": "schemas/system-claim.schema.json"
     },
     {
-      "content_sha256": "b31d94fdfe3ab2c9efb303d0c0dc68e44f96bd8b1ed48ceebed7ee67ee8a1bd2",
+      "content_sha256": "f0054fcccd618063016e0f70dce66f148ee87a0c47620a10bb841560423e0e43",
       "schema_file": "schemas/dependency-exit-evidence.schema.json"
     }
   ],
