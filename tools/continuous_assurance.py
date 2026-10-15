@@ -115,6 +115,10 @@ def evaluate(bundle: dict[str, Any], at_time: str | None = None) -> tuple[str, l
     if not config_id:
         return "FAIL_CLOSED", ["configuration passport missing config_id"]
 
+    basis = passport.get("recovery_basis_id")
+    if not isinstance(basis, str) or not basis.strip():
+        return "FAIL_CLOSED", ["invalid recovery basis"]
+
     try:
         if not (parse_time(passport["valid_from"]) <= current_time <= parse_time(passport["valid_until"])):
             decision = _stronger(decision, "REAUTHORIZATION_REQUIRED")
@@ -170,6 +174,10 @@ def evaluate(bundle: dict[str, Any], at_time: str | None = None) -> tuple[str, l
             decision = _stronger(decision, "REVERIFICATION_REQUIRED")
             reasons.append(f"evidence {item.get('evidence_id')} is {item.get('state')}")
             continue
+        dependencies = item.get("dependencies", [])
+        if not isinstance(dependencies, list) or basis not in dependencies:
+            decision = _stronger(decision, "REAUTHORIZATION_REQUIRED")
+            reasons.append(f"evidence {item.get('evidence_id')} is not bound to recovery basis")
         if item.get("result") != "PASS":
             decision = _stronger(decision, "REVERIFICATION_REQUIRED")
             reasons.append(f"evidence {item.get('evidence_id')} result is not PASS")
