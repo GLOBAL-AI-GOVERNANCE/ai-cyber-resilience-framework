@@ -94,6 +94,7 @@ Machine-only readiness evidence is recorded in `docs/release-readiness-v0.2.0-ma
 ### Example
 
 * `examples/sample-mission-system-boundary-map.md`
+* `examples/synthetic-ai-compressed-readiness-walkthrough.md` — synthetic decision package for one fictional boundary; not a real assessment and not an operating authorization
 
 ---
 
@@ -161,6 +162,8 @@ All discussion of adversary behavior or AI capabilities is included only at the 
 5. Record one evidence claim using `templates/evidence-card-template.md`.
 
 Do not start with the whole enterprise. Start with one system boundary and prove what is true.
+
+One fictional boundary is worked end to end in [examples/synthetic-ai-compressed-readiness-walkthrough.md](examples/synthetic-ai-compressed-readiness-walkthrough.md). Use it to see how the existing templates fit together. It is not an assessment of a real system and it is not an operating authorization.
 
 ---
 
