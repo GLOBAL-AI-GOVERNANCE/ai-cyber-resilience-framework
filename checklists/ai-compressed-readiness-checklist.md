@@ -10,10 +10,16 @@
 
 ## Scoring
 
-- **Strong** — Implemented, documented, and verified with evidence
-- **Partial** — Partially implemented or documented but gaps exist
-- **Weak** — Not implemented or no meaningful evidence
-- **N/A** — Not applicable to this system
+- **Strong** — Implemented and documented, and supported by current, relevant verification evidence (inspection, analysis, test, or demonstration) that a named reviewer can retrieve. Design intent, policy text, an unverified assertion, a blank evidence field, a stale record, or evidence about a different boundary is not Strong.
+- **Partial** — Partially implemented, documented, or evidenced, but a current gap remains. A reported status without current verification is Partial or Weak, not Strong.
+- **Weak** — Not implemented, contradicted, or lacking meaningful evidence.
+- **N/A** — Not applicable to this assessed boundary. N/A requires a documented applicability rationale in Evidence / Notes. A blank N/A is incomplete, not N/A.
+
+Missing evidence is not Strong. Do not infer Strong from silence.
+
+A failed or unevidenced critical isolation or recovery boundary cannot be concealed by an overall label. Record it under Critical exceptions and evidence limits before any overall label. Human reviewers read that section first.
+
+Overall labels are qualitative communication aids. They are not a numeric score, not a calibrated risk prediction, not certification, not proof of resilience, and not an operating authorization.
 
 ---
 
@@ -66,7 +72,23 @@
 
 ---
 
+## Critical exceptions and evidence limits
+
+Complete this section before any overall label. List every failed or unevidenced critical isolation or recovery boundary here, even when other items are Strong. An overall label cannot conceal these items. If none are identified, write "None identified" and name the assessed boundary. Do not leave this section blank.
+
+| Exception or limit | Boundary | Why it is critical | Evidence state | Owner |
+|---|---|---|---|---|
+| | | | Demonstrated, Reported, Unknown, or Not applicable | |
+
+**Evidence state**
+
+- **Demonstrated** — A current, relevant verification record shows the stated result for the stated boundary.
+- **Reported** — A person or document asserts the result, but current verification evidence was not retrieved.
+- **Unknown** — No assertion and no verification record. Unknown is not Strong and is not a demonstrated failure.
+
 ## Overall Assessment
+
+Assign a label only after the section above is complete. Do not assign a label that hides an open critical exception.
 
 **Current Structural Resilience Level:**
 ☐ Strong — Architecture significantly limits blast radius and mission impact
@@ -89,3 +111,5 @@
 ---
 
 *Use in conjunction with Domain Separation Assessment and other checklists in this framework.*
+
+Worked synthetic example, not a real system and not an operating authorization: [Synthetic AI-compressed readiness walkthrough](../examples/synthetic-ai-compressed-readiness-walkthrough.md).

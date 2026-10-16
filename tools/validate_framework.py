@@ -313,6 +313,53 @@ def validate_workflow() -> None:
             fail(f"continuous-assurance workflow command missing: {command}")
 
 
+def validate_readiness_walkthrough() -> None:
+    checklist = (
+        ROOT / "checklists" / "ai-compressed-readiness-checklist.md"
+    ).read_text(encoding="utf-8-sig")
+    for rule in (
+        "current, relevant verification evidence",
+        "is not Strong",
+        "applicability rationale",
+        "## Critical exceptions and evidence limits",
+        "cannot be concealed",
+        "not a calibrated risk prediction",
+    ):
+        if rule not in checklist:
+            fail(f"readiness evidence rule missing: {rule}")
+
+    walkthrough = (
+        ROOT / "examples" / "synthetic-ai-compressed-readiness-walkthrough.md"
+    )
+    if not walkthrough.is_file():
+        fail("synthetic readiness walkthrough is missing")
+    text = walkthrough.read_text(encoding="utf-8-sig")
+    for requirement in (
+        "Synthetic reference",
+        "authority_effect: NONE",
+        "non-authorizing",
+        "Demonstrated",
+        "Reported",
+        "Unknown",
+        "not an operating authorization",
+        "no numeric score",
+        "../checklists/ai-compressed-readiness-checklist.md",
+        "../checklists/domain-separation-assessment.md",
+        "../templates/domain-boundary-inventory.md",
+        "../templates/authorized-flow-matrix.md",
+        "../templates/attack-path-review.md",
+        "../templates/evidence-card-template.md",
+        "sample-mission-system-boundary-map.md",
+    ):
+        if requirement not in text:
+            fail(f"readiness walkthrough requirement missing: {requirement}")
+
+    readme = README.read_text(encoding="utf-8-sig")
+    link = "examples/synthetic-ai-compressed-readiness-walkthrough.md"
+    if link not in readme:
+        fail("README does not link the synthetic readiness walkthrough")
+
+
 def validate_hygiene(files: list[Path]) -> None:
     for path in files:
         relative = path.relative_to(ROOT)
@@ -338,13 +385,14 @@ def main() -> None:
     validate_source_log()
     validate_security()
     validate_workflow()
+    validate_readiness_walkthrough()
     validate_hygiene(files)
 
     print(
         "Framework validation passed: "
         f"{len(files)} repository files checked; "
         "identity, links, citation, sources, security, "
-        "workflow pins, and hygiene verified."
+        "workflow pins, readiness evidence rules, and hygiene verified."
     )
 
 

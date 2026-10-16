@@ -2,6 +2,8 @@
 
 ## Unreleased — v0.2.0 Candidate: Continuous Assurance Thread
 
+- Clarified qualitative readiness scoring so Strong requires current, relevant verification evidence, N/A requires an applicability rationale, and an overall label cannot conceal a failed or unevidenced critical isolation or recovery boundary. Added one synthetic decision-package walkthrough that reuses the existing templates. This is documentation on main. It does not change the published v0.1.1 release and it does not authorize operation.
+
 - Added a configuration-bound Continuous Assurance Thread from claims and invariants through evidence, operating disposition, recovery, reauthorization, and retirement.
 - Added six machine-readable assurance schemas plus a digest-verified schema catalog.
 - Added a separate System Configuration Passport; Agent Trust Passport semantics remain outside this repository and are not redefined.
