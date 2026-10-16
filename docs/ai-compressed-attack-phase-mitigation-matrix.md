@@ -1,70 +1,78 @@
 # AI-Compressed Attack Phase Mitigation Matrix
 
-**Structural problem-solving map for bounding impact after initial access**
-**Version:** v0.1.1 — AI Cyber Resilience Framework
-**Grounding:** NIST SP 800-160 domain separation and complementary principles
+**Defensive reference map for intended structural effects after initial access**
+**Published framework identity:** v0.1.1 — AI Cyber Resilience Framework
+**Grounding:** NIST SP 800-160 domain separation and complementary principles already documented in this repository
+**authority_effect:** NONE
 
 ---
 
 ## Purpose
 
-This matrix turns the framework thesis into an immediate problem-solving tool. It shows which structural design principles most effectively raise attacker cost at each phase of an AI-compressed cyberattack and what concrete architectural outcome to seek.
+This matrix is a planning reference. It maps common post-compromise phases to structural design principles already defined in this repository and states the architectural effect those principles are intended to support.
 
-It is defensive architecture guidance only. It does not describe offensive techniques or provide exploit guidance.
+It does not measure attacker cost, prove that a control works, certify a system, or authorize operation. Desired outcomes below are design intents. They become claims about a real system only when qualified people supply current evidence and test the actual environment.
+
+This document is defensive architecture guidance only. It does not describe offensive techniques or provide exploit guidance.
+
+Use the existing qualitative readiness checklist and evidence cards. This matrix does not introduce a second scoring system.
 
 ---
 
 ## Attack Phase × Structural Mitigation Matrix
 
-| Attack Phase                  | Primary Structural Mitigations                                      | Desired Architectural Outcome                                      | Cost Imposed on Attacker |
-|-------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------|--------------------------|
-| Initial Access                | Least Functionality, Anomaly Detection                              | Fewer exposed services; anomalous probes become visible sooner     | Medium                  |
-| Execution & C2 Establishment  | Domain Separation (data diodes / CDS), Continuous Protection        | Callback paths from sensitive domains are blocked or mediated      | High                    |
-| Discovery / Enumeration       | Least Sharing, Domain Separation                                    | Attacker cannot see or reach assets outside the compromised domain | High                    |
-| Lateral Movement              | Domain Separation + Mediated Access + Least Sharing                 | Cross-domain traversal is structurally impossible or explicitly authorized and logged only | Very High               |
-| Privilege Escalation          | Least Privilege + Domain Separation (admin/user/mission split)      | Credentials or rights harvested in one domain do not operate in another | Very High               |
-| Persistence                   | Least Persistence + Least Functionality                             | Unnecessary long-lived processes, services, and autoruns are absent | High                    |
-| Mission Execution             | All principles combined + Anomaly Detection                         | Blast radius remains bounded; every boundary crossing is logged and reviewable | Prohibitive             |
+| Attack Phase | Primary Structural Mitigations | Intended Architectural Effect | Claim Limit |
+|---|---|---|---|
+| Initial Access | Least Functionality, Anomaly Detection | Reduce unnecessary exposed services so unexpected probes are easier to distinguish from authorized use | Does not prevent initial access |
+| Execution and external callback | Domain Separation, Continuous Protection | Make unauthorized callbacks from higher-sensitivity domains blocked or mediated where a boundary is actually enforced | Does not guarantee every callback path is closed |
+| Discovery / Enumeration | Least Sharing, Domain Separation | Limit what a compromised domain can enumerate when shared paths and cross-domain reach are explicitly constrained | Does not make hidden or undocumented paths invisible by assertion |
+| Lateral Movement | Domain Separation, Mediated Access, Least Sharing | Require cross-domain movement to use an explicit, mediated, and logged path instead of implicit trust | Does not make all lateral movement impossible |
+| Privilege Escalation | Least Privilege, Domain Separation | Keep rights and credentials useful in one domain from automatically operating in another domain | Does not stop escalation inside a domain that is itself over-privileged |
+| Persistence | Least Persistence, Least Functionality | Reduce long-lived processes, services, and startup mechanisms that are not required for the domain mission | Does not remove every possible foothold |
+| Mission impact | Combined principles plus Anomaly Detection | Keep higher-value functions behind defined boundaries so impact is more likely to stay bounded and reviewable | Does not prove mission resilience or that every crossing is observed |
+
+The right-hand column is a limit on the claim, not a measured attacker-cost rating.
 
 ---
 
-## Five-Step Problem-Solving Path
+## Five-Step Application Path
 
-Use this path on one mission-critical system or enclave. Do not attempt enterprise-wide application on the first pass.
+Apply this path to one system or enclave. Do not treat the first pass as an enterprise-wide assessment.
 
-1. **Identify the protected mission function**  
-   Name the single business, operational, or safety function that must remain available even if other domains are compromised.
+1. **Name the function to protect.** Identify one business, operational, or safety function that should remain available even if another domain is compromised.
 
-2. **Inventory domains and authorized flows**  
-   Complete `checklists/domain-separation-assessment.md` and `templates/domain-boundary-inventory.md` + `templates/authorized-flow-matrix.md`. Record only what currently exists.
+2. **Record current boundaries.** Use `checklists/domain-separation-assessment.md`, `templates/domain-boundary-inventory.md`, and `templates/authorized-flow-matrix.md`. Record what exists. Leave evidence blank when none exists yet.
 
-3. **Locate the highest-leverage gaps**  
-   Using the matrix above, mark any phase where the corresponding structural mitigation is absent or untested. Priority order is lateral movement, privilege escalation, then persistence.
+3. **Mark untested intents.** Using the matrix, note phases where the listed mitigation is absent, undocumented, or not tested. Start with lateral movement, privilege boundaries, and persistence.
 
-4. **Define the minimal architectural change**  
-   For each high-leverage gap, specify the smallest change that creates a mediated, logged boundary (e.g., micro-segment one administrative plane, enforce least privilege on a service account, remove a shared administrative channel). Record the claim and required evidence using `templates/evidence-card-template.md`.
+4. **Specify one architectural change.** For each priority gap, name the smallest change that would create a mediated and logged boundary. Record the claim and the evidence still required with `templates/evidence-card-template.md`.
 
-5. **Verify and maintain**  
-   Test that unauthorized cross-domain attempts are blocked or mediated. Schedule re-verification after any change, update, or recovery event so continuous protection holds. Revisit the matrix after material architecture changes.
+5. **Test and reassess.** Where authorized, test that an unauthorized cross-domain attempt is blocked or mediated. Reassess after change, update, recovery, or a new dependency. A completed template is not proof that the live system behaves as intended.
+
+The existing 20-item qualitative readiness checklist remains the scoring aid. Strong still requires current, relevant verification evidence.
 
 ---
 
-## Outcome Statement
+## Outcome Boundary
 
-When the matrix and five-step path are applied, an AI-compressed adversary who obtains initial access is forced to overcome explicit, verifiable domain boundaries before reaching higher-value mission functions. Impact is bounded by design rather than by detection speed alone.
+Applied as written, this reference helps a team state whether one boundary is designed to contain compromise. It does not establish that compromise is contained, that lateral movement is impossible, that every boundary crossing is observed, or that attacker cost has been measured.
 
-**The failure mode remains inadequate engineering, not inadequate technology.**
+**authority_effect: NONE.** Human review remains required before any operational conclusion.
 
 ---
 
 ## Related Artifacts
 
-- `docs/article-defending-against-ai-compressed-cyberattacks.md` — core thesis
-- `docs/structural-security-principles.md` — principle definitions
-- `docs/threat-model.md` — defensive lifecycle characterization
-- `checklists/domain-separation-assessment.md`
-- `templates/authorized-flow-matrix.md`
+- [docs/article-defending-against-ai-compressed-cyberattacks.md](article-defending-against-ai-compressed-cyberattacks.md)
+- [docs/structural-security-principles.md](structural-security-principles.md)
+- [docs/threat-model.md](threat-model.md)
+- [docs/nist-sp-800-160-mapping.md](nist-sp-800-160-mapping.md)
+- [checklists/ai-compressed-readiness-checklist.md](../checklists/ai-compressed-readiness-checklist.md)
+- [checklists/domain-separation-assessment.md](../checklists/domain-separation-assessment.md)
+- [templates/authorized-flow-matrix.md](../templates/authorized-flow-matrix.md)
+- [templates/evidence-card-template.md](../templates/evidence-card-template.md)
+- [examples/synthetic-ai-compressed-readiness-walkthrough.md](../examples/synthetic-ai-compressed-readiness-walkthrough.md)
 
 ---
 
-*Part of AI Cyber Resilience Framework v0.1.1. Public-safe defensive guidance only.*
+*Part of the published AI Cyber Resilience Framework v0.1.1 documentation set. Public-safe defensive guidance only. Not certification, compliance determination, production authorization, or proof of deployed resilience.*
