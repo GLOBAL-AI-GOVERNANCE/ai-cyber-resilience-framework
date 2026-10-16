@@ -1,7 +1,8 @@
 # AI-Compressed Attack Phase Mitigation Matrix
 
 **Defensive reference map for intended structural effects after initial access**
-**Published framework identity:** v0.1.1 — AI Cyber Resilience Framework
+**Document status:** Unreleased documentation on the current branch. Not part of the published v0.1.1 tag.
+**Published release identity:** v0.1.1 remains the published AI Cyber Resilience Framework release until a separate release gate.
 **Grounding:** NIST SP 800-160 domain separation and complementary principles already documented in this repository
 **authority_effect:** NONE
 
@@ -75,4 +76,4 @@ Applied as written, this reference helps a team state whether one boundary is de
 
 ---
 
-*Part of the published AI Cyber Resilience Framework v0.1.1 documentation set. Public-safe defensive guidance only. Not certification, compliance determination, production authorization, or proof of deployed resilience.*
+*Unreleased documentation proposed for current main. It is not included in the published v0.1.1 tag. The v0.2.0 Continuous Assurance Thread remains a separate unreleased candidate. Public-safe defensive guidance only. Not certification, compliance determination, production authorization, or proof of deployed resilience.*
