@@ -2,6 +2,7 @@
 
 ## Unreleased — v0.2.0 Candidate: Continuous Assurance Thread
 
+- Added AI-compressed attack phase mitigation matrix and five-step problem-solving path for bounding blast radius after initial access.
 - Clarified qualitative readiness scoring so Strong requires current, relevant verification evidence, N/A requires an applicability rationale, and an overall label cannot conceal a failed or unevidenced critical isolation or recovery boundary. Added one synthetic decision-package walkthrough that reuses the existing templates. This is documentation on main. It does not change the published v0.1.1 release and it does not authorize operation.
 
 - Added a configuration-bound Continuous Assurance Thread from claims and invariants through evidence, operating disposition, recovery, reauthorization, and retirement.
@@ -40,4 +41,3 @@ Included:
 - Boundary, flow, attack-path, telemetry, and evidence-card templates
 - Sample mission-system boundary map
 - Public-safe disclaimer, contribution guidance, security policy, citation metadata, and license
-

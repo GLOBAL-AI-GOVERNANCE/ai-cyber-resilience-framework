@@ -51,6 +51,7 @@ This framework does not govern AI model development directly. It supports govern
 ### Core Documentation
 
 * `docs/article-defending-against-ai-compressed-cyberattacks.md`
+* `docs/ai-compressed-attack-phase-mitigation-matrix.md`
 * `docs/threat-model.md`
 * `docs/structural-security-principles.md`
 * `docs/nist-sp-800-160-mapping.md`
