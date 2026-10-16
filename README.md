@@ -166,6 +166,8 @@ Do not start with the whole enterprise. Start with one system boundary and prove
 
 One fictional boundary is worked end to end in [examples/synthetic-ai-compressed-readiness-walkthrough.md](examples/synthetic-ai-compressed-readiness-walkthrough.md). Use it to see how the existing templates fit together. It is not an assessment of a real system and it is not an operating authorization.
 
+[Containment Ledger](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger) is a separate public review instrument for one system: name the domains, mark every path, and record evidence before a human disposition. It is not part of the published v0.1.1 release. A record from that instrument is not certification, compliance, production authorization, or proof of deployed resilience. `authority_effect: NONE`.
+
 ---
 
 ## Finished Outcome
