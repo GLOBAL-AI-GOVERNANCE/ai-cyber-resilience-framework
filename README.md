@@ -299,7 +299,7 @@ This framework is provided as a public defensive resource. Contributions that ma
 
 This framework is the **CONTAIN + RECOVER** layer. Its browser companion is the [Containment Ledger](https://global-ai-governance.github.io/containment-ledger/).
 
-- **Connect your agent:** [llms.txt](https://global-ai-governance.github.io/global-ai-governance-toolkit/llms.txt), [machine-interface.json](https://global-ai-governance.github.io/global-ai-governance-toolkit/machine-interface.json), and the [gag-mcp](https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp) server. Compatible with MCP-based agents.
+- **Connect your agent:** [llms.txt](https://global-ai-governance.github.io/global-ai-governance-toolkit/llms.txt), [machine-interface.json](https://global-ai-governance.github.io/global-ai-governance-toolkit/machine-interface.json), and the [AI Governance Model Context Protocol Server](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp) (AI Governance MCP; command `gag-mcp`). Compatible with Model Context Protocol (MCP) based agents.
 - **Run a pilot:** [pilot path and contact](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE#for-labs-and-teams).
 - **Read the spec:** [versioned specifications](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#spec) and the [product map](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE#product-map).
 
