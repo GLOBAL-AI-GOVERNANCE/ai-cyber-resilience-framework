@@ -1,5 +1,11 @@
 # AI Cyber Resilience Framework
 
+<!-- gag:nav -->
+[![Global AI Governance](https://img.shields.io/badge/Global_AI_Governance-portfolio-0b100d)](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE) ![Status](https://img.shields.io/badge/status-v0.1.1_reference-blue) ![authority_effect](https://img.shields.io/badge/authority__effect-NONE-lightgrey)
+
+**[Connect your agent](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#agents)** · **[Run a pilot](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE#for-labs-and-teams)** · **[Read the spec](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#spec)** · [All products](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE#product-map)
+<!-- /gag:nav -->
+
 [![Framework Checks](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml/badge.svg?branch=main)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml)
 
 **Structural security against AI-compressed cyberattacks**
@@ -287,3 +293,15 @@ This framework is provided as a public defensive resource. Contributions that ma
 ---
 
 **Structural security. Verifiable evidence. Bounded impact.**
+
+<!-- gag:footer -->
+## Part of Global AI Governance
+
+This framework is the **CONTAIN + RECOVER** layer. Its browser companion is the [Containment Ledger](https://global-ai-governance.github.io/containment-ledger/).
+
+- **Connect your agent:** [llms.txt](https://global-ai-governance.github.io/global-ai-governance-toolkit/llms.txt), [machine-interface.json](https://global-ai-governance.github.io/global-ai-governance-toolkit/machine-interface.json), and the [gag-mcp](https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp) server. Compatible with MCP-based agents.
+- **Run a pilot:** [pilot path and contact](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE#for-labs-and-teams).
+- **Read the spec:** [versioned specifications](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#spec) and the [product map](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE#product-map).
+
+Outputs are non-authorizing (`authority_effect: NONE`). Not affiliated with or endorsed by any AI lab or platform.
+<!-- /gag:footer -->
