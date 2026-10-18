@@ -61,7 +61,7 @@ The candidate artifacts on `main` are not part of v0.1.1. They add these boundar
 
 ## Maintenance of Public-Safe Boundary
 
-All content in this repository should remain within defensive, public-safe bounds and should be reviewed before release. Contributions or derivatives should maintain this boundary. If you identify content that appears to cross into offensive or sensitive territory, please open an issue or contact the maintainers.
+All content in this repository should remain within defensive, public-safe bounds and should be reviewed before release. Contributions or derivatives should maintain this boundary.
 
 ---
 
