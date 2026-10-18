@@ -57,7 +57,7 @@ This framework does not govern AI model development directly. It supports govern
 ### Core Documentation
 
 * `docs/article-defending-against-ai-compressed-cyberattacks.md`
-* `docs/ai-compressed-attack-phase-mitigation-matrix.md`
+* `docs/ai-compressed-attack-phase-mitigation-matrix.md` — unreleased documentation on `main`; not in the v0.1.1 tag
 * `docs/threat-model.md`
 * `docs/structural-security-principles.md`
 * `docs/nist-sp-800-160-mapping.md`
@@ -77,8 +77,13 @@ This framework does not govern AI model development directly. It supports govern
 * `tools/validate_assurance.py`
 * `tests/test_continuous_assurance.py`
 * `docs/quantum-era-crypto-agility-reference-thread.md` - optional synthetic assurance/reference thread
+* `examples/crypto-agility/synthetic-reference-thread.json` - synthetic crypto-agility fixture
+* `tools/guided_assessment.py` - local guided assessment with a non-authorizing export
+* `tools/validate_dependency_exit.py` and `examples/dependency-exit/` - synthetic dependency-exit evidence
 
 This candidate adds configuration-bound continuous-assurance semantics without claiming a v0.2.0 release. Current published release identity remains v0.1.1 until a separate reviewed release gate.
+
+`PERMITTED` and the other evaluator decisions in these artifacts are reference-model outputs over synthetic fixtures. They are not operating authorization, certification, compliance determinations, or evidence of containment or deployed effectiveness.
 
 Machine-only readiness evidence is recorded in `docs/release-readiness-v0.2.0-machine.md`. That record is not a release decision. No v0.2.0 tag or release has been made.
 
@@ -103,7 +108,7 @@ Release gate status: `docs/release-gate-v0.2.0.md`. Compatibility: `docs/compati
 ### Example
 
 * `examples/sample-mission-system-boundary-map.md`
-* `examples/synthetic-ai-compressed-readiness-walkthrough.md` — synthetic decision package for one fictional boundary; not a real assessment and not an operating authorization
+* `examples/synthetic-ai-compressed-readiness-walkthrough.md` — synthetic decision package for one fictional boundary; not a real assessment and not an operating authorization; unreleased, not in the v0.1.1 tag
 
 ---
 

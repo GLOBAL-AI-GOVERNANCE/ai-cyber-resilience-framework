@@ -178,6 +178,7 @@ def main() -> None:
     check_bundle(bundle)
     decision, reasons = evaluate(bundle)
     print(f"Continuous assurance validation passed: decision={decision}; reasons={'; '.join(reasons)}")
+    print("Boundary: synthetic reference-model decision. Not an operating authorization, certification, compliance determination, or evidence of containment or deployed effectiveness. authority_effect: NONE.")
 
 if __name__ == "__main__":
     main()
