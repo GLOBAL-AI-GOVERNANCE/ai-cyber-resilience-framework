@@ -1,0 +1,43 @@
+{
+  "receipt_version": "1.0.0",
+  "repository": "GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework",
+  "review_commit": "bf4fab7f590d4d2af6e08596f7a6fb1b0f220c96",
+  "review_tree": "2aca76d0a53666361a37b6af197dfa8553aabe98",
+  "manifest_sha256": "",
+  "manifest_hashes_matched": false,
+  "reviewer": {
+    "identifier": "",
+    "organization": "",
+    "public_attribution": "",
+    "qualification_summary": "",
+    "competence_areas": [],
+    "competence_area_values": ["CRYPTOGRAPHY_OR_CRYPTO_MIGRATION", "SYSTEMS_ENGINEERING_OR_DEPLOYMENT_TRANSITION"]
+  },
+  "disclosure": {
+    "relationship_to_project": "",
+    "relationship_to_interested_vendor": "",
+    "same_control_boundary": false
+  },
+  "reviewed_at_utc": "",
+  "environment_and_tools": [],
+  "area_result_values": ["PASS", "PASS_WITH_FINDINGS", "FAIL", "NOT_REVIEWED"],
+  "areas": {
+    "R1_planning_assumptions": {"result": "NOT_REVIEWED", "notes": ""},
+    "R2_dependency_inventory_model": {"result": "NOT_REVIEWED", "notes": ""},
+    "R3_confidentiality_horizon": {"result": "NOT_REVIEWED", "notes": ""},
+    "R4_migration_readiness": {"result": "NOT_REVIEWED", "notes": ""},
+    "R5_downgrade_and_rollback": {"result": "NOT_REVIEWED", "notes": ""},
+    "R6_transition_evidence": {"result": "NOT_REVIEWED", "notes": ""},
+    "R7_interoperability": {"result": "NOT_REVIEWED", "notes": ""},
+    "R8_residual_risk_language": {"result": "NOT_REVIEWED", "notes": ""},
+    "R9_human_release_boundary": {"result": "NOT_REVIEWED", "notes": ""},
+    "R10_claims_and_limitations": {"result": "NOT_REVIEWED", "notes": ""}
+  },
+  "findings": {"high_open": 0, "medium_open": 0, "low_open": 0, "informational": 0, "records": []},
+  "recommended_changes": [],
+  "unresolved_assumptions": [],
+  "limitations": "",
+  "overall_disposition": "NOT_REVIEWED",
+  "overall_disposition_values": ["SUPPORTS_G7", "SUPPORTS_G7_WITH_REQUIRED_CHANGES", "DOES_NOT_SUPPORT_G7", "INCOMPLETE", "NOT_REVIEWED"],
+  "non_claims_acknowledged": false
+}

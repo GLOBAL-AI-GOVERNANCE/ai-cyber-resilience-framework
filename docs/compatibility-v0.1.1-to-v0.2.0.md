@@ -1,6 +1,6 @@
 # Compatibility: v0.1.1 to v0.2.0
 
-**Status:** Compatibility assessment for the unreleased v0.2.0 candidate. Steward review under the v0.2.0 release gate (G6): PENDING STEWARD DECISION. Applies only if v0.2.0 is released.
+**Status:** Compatibility assessment for the unreleased v0.2.0 candidate. Steward review under the v0.2.0 release gate (G6) recorded 2026-10-18. Applies only if v0.2.0 is released. v0.2.0 is not released.
 
 ## Unchanged
 
@@ -15,6 +15,13 @@
 ## Added
 
 - Continuous Assurance Thread documents, nine `1.0.0` schemas with a digest catalog, a synthetic reference bundle, a guided assessment, dependency-exit evidence, an optional crypto-agility thread, and an attack-phase mitigation matrix. All are additive.
+- Standard JSON Schema validation (`tools/validate_schemas_standard.py`) with a hash-locked engine in `requirements-schema.lock`. It is required in repository CI and optional for users. The core validators remain dependency-free.
+
+## Schema compatibility
+
+- Schema compatibility follows the semantic-versioning rules in `docs/schema-versioning-and-validation.md`. A major version change can break consumers. Minor and patch changes are intended not to.
+- Published schema contracts are not edited in place. Any schema byte change gets a new catalog digest, and a meaning change gets a new `schema_version`.
+- Consumers should record the `schema_version` and catalog digest they rely on, and reject unknown major versions.
 
 ## What downstream users must change
 
@@ -24,5 +31,5 @@
 ## Not guaranteed
 
 - Stability of `1.0.0` schemas beyond the documented versioning policy.
-- That any validator in this repository enforces every schema keyword. See `docs/schema-versioning-and-validation.md`.
+- That a schema-valid artifact is semantically correct or describes a real system. See the validation layers in `docs/schema-versioning-and-validation.md`.
 - Fitness, conformance, or effectiveness of any assessed system.
