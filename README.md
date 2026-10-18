@@ -82,6 +82,8 @@ This candidate adds configuration-bound continuous-assurance semantics without c
 
 Machine-only readiness evidence is recorded in `docs/release-readiness-v0.2.0-machine.md`. That record is not a release decision. No v0.2.0 tag or release has been made.
 
+Release gate status: `docs/release-gate-v0.2.0.md`. Compatibility: `docs/compatibility-v0.1.1-to-v0.2.0.md`. Schema validation scope: `docs/schema-versioning-and-validation.md`.
+
 ### Checklists
 
 * `checklists/ai-compressed-readiness-checklist.md`
