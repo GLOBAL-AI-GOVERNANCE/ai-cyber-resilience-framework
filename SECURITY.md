@@ -2,18 +2,9 @@
 
 **AI Cyber Resilience Framework** is a public defensive documentation repository. It contains no executable framework runtime, exploit code, or target-specific offensive procedures.
 
-## Report Privately
+This repository does not operate an external security-report intake. Do not place secrets, credentials, personal data, sensitive operational information, or vulnerability material in public GitHub surfaces.
 
-Use GitHub private vulnerability reporting or a private security advisory for:
-
-- Content that may cross the public-safe boundary
-- Sensitive technical details that should not be disclosed publicly
-- Materially misleading security guidance
-- Licensing, attribution, or provenance concerns with security implications
-- Integrity problems in the repository or its release process
-
-Do not place sensitive vulnerability details, credentials, target information, or potentially harmful procedures in a public issue.
-
+Do not place sensitive vulnerability details, credentials, target information, or potentially harmful procedures in public GitHub surfaces.
 
 ## Scope
 

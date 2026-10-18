@@ -89,9 +89,9 @@ Project-authored or otherwise same-control-boundary reviews do not qualify as in
 | Low | Editorial or consistency issues. |
 | Informational | Observations and suggestions. |
 
-## Submitting results
+## Required review evidence
 
-Submit one [`REVIEW_RECEIPT_TEMPLATE.json`](REVIEW_RECEIPT_TEMPLATE.json) per reviewer and one [`FINDING_TEMPLATE.md`](FINDING_TEMPLATE.md) record per finding. Unfavorable findings are welcome and are as useful as a clean result.
+The review evidence consists of one [`REVIEW_RECEIPT_TEMPLATE.json`](REVIEW_RECEIPT_TEMPLATE.json) per reviewer and one [`FINDING_TEMPLATE.md`](FINDING_TEMPLATE.md) record per finding. Unfavorable findings carry the same evidential weight as a clean result.
 
 ## After review
 
