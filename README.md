@@ -42,7 +42,7 @@ A mission-resilient system ensures that:
 
 ## Why This Framework Exists
 
-Frontier AI models have demonstrated the ability to accelerate vulnerability discovery and multi-step security reasoning in controlled and adversarial contexts. When comparable capabilities become broadly accessible, organizations relying on implicit trust and flat architectures face elevated risk.
+Frontier AI models have demonstrated the ability to accelerate vulnerability discovery and multi-step security reasoning in controlled evaluation and defensive research contexts. When comparable capabilities become broadly accessible, organizations relying on implicit trust and flat architectures face elevated risk.
 
 This framework provides documentation, checklists, templates, and examples for architectural assessment, architecture review, and evidence-based hardening. It is not a monitoring tool, not executable software, and not a compliance checklist.
 
@@ -112,7 +112,7 @@ Machine-only readiness evidence is recorded in `docs/release-readiness-v0.2.0-ma
 *Alt text: The diagram compares a flat architecture where implicit trust allows one compromised endpoint to expand enterprise-wide impact with a domain-separated architecture where unauthorized movement is blocked at a mediated boundary and approved workflows are authorized and logged.*
 
 **Left:** Traditional flat architecture — one compromised endpoint can expand into broader enterprise or mission impact.
-**Right:** Domain-separated architecture — compromise is contained within the affected domain; cross-domain movement requires explicit, mediated, logged authorization.
+**Right:** Domain-separated architecture — compromise is intended to stay within the affected domain; cross-domain movement requires explicit, mediated, logged authorization.
 
 ---
 
