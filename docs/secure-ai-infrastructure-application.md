@@ -22,7 +22,7 @@ The synthetic cell defines five required properties:
 | P4 | Assured recovery | Can the system re-establish a known trust basis and produce new evidence after disruption or compromise? |
 | P5 | Cross-realm privilege separation | Are privileged authorities separated across realms so one compromise does not silently become universal authority? |
 
-The reference validator requires all P1–P5 invariants before returning `PERMITTED`.
+The reference evaluator requires all P1–P5 invariants before returning `PERMITTED`.
 
 ## Bounded transaction
 
@@ -55,4 +55,4 @@ Synthetic UAT then exercises:
 7. recovery re-entry through reconstitution, reverification, and reauthorization;
 8. superseded evidence cannot satisfy current assurance.
 
-These are deterministic reference outcomes only. They do not establish the security of any real AI infrastructure.
+These are deterministic reference outcomes only. They do not establish the security of any real AI infrastructure. The starting `PERMITTED` state is a synthetic fixture value. It is not an operating authorization, certification, compliance determination, or evidence of containment or deployed effectiveness.

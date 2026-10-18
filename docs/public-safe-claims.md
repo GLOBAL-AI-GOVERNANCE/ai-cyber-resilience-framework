@@ -48,6 +48,17 @@ It is **not** intended for:
 
 ---
 
+## Unreleased v0.2.0 Development Candidate
+
+The candidate artifacts on `main` are not part of v0.1.1. They add these boundaries:
+
+- `PERMITTED`, `AUTHORIZED`, `CONTAINED`, and other evaluator decisions and states are reference-model outputs over synthetic fixtures. They are not operating authorization, certification, compliance determinations, or evidence of containment, recovery, or deployed effectiveness.
+- Repository validation shows that artifacts are internally consistent with the declared contracts. It does not show that a real system matches them.
+- The crypto-agility thread is synthetic. It does not show a real migration or post-quantum deployment, or claim quantum-safe security, invulnerability, certification, or measured effectiveness.
+- The dependency-exit, guided-assessment, and crypto-agility contracts require human review and fix `authority_effect` at `NONE`.
+
+---
+
 ## Maintenance of Public-Safe Boundary
 
 All content in this repository should remain within defensive, public-safe bounds and should be reviewed before release. Contributions or derivatives should maintain this boundary. If you identify content that appears to cross into offensive or sensitive territory, please open an issue or contact the maintainers.

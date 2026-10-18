@@ -26,6 +26,8 @@ PERMITTED
 
 `RETIRED` is terminal.
 
+These are states of the reference model. Reaching `AUTHORIZED` or `PERMITTED` in the reference evaluator does not authorize operation, certify a system, or show that containment or recovery works in a deployed environment.
+
 ## Design rules
 
 1. `PERMITTED` requires current evidence, current configuration binding, valid authority, and the required P1–P5 invariant set.

@@ -83,7 +83,7 @@ Only `CURRENT` evidence bound to the current configuration is eligible to suppor
 
 Unknown flows, unsupported schema versions, revoked authority, expired evidence, configuration mismatch, incomplete required invariants, and invalid recovery basis are not treated as “probably okay.”
 
-The reference validator returns a non-permitted decision and records why.
+The reference evaluator returns a non-permitted decision and records why.
 
 ## Scope boundary
 
