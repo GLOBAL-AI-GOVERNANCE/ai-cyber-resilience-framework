@@ -38,6 +38,9 @@ ASSURANCE_REQUIRED = (
     ROOT / "examples" / "dependency-exit" / "synthetic-exit-record.json",
     ROOT / "tools" / "validate_dependency_exit.py",
     ROOT / "tests" / "test_dependency_exit.py",
+    ROOT / "tools" / "validate_schemas_standard.py",
+    ROOT / "tests" / "test_schema_standard.py",
+    ROOT / "requirements-schema.lock",
 )
 
 OLD_NAME = "AI-Compressed Cyber Defense Framework"
@@ -308,9 +311,30 @@ def validate_workflow() -> None:
     for command in (
         "python3 -B tools/validate_assurance.py",
         "python3 -m unittest discover -s tests -v",
+        "pip install --require-hashes --no-deps -r requirements-schema.lock",
+        "python3 -B tools/validate_schemas_standard.py",
+        'ACRF_REQUIRE_STANDARD_SCHEMA: "1"',
     ):
         if command not in text:
             fail(f"continuous-assurance workflow command missing: {command}")
+
+
+def validate_schema_lock() -> None:
+    lock = (ROOT / "requirements-schema.lock").read_text(encoding="utf-8")
+    requirements = [
+        line.split(" ", 1)[0]
+        for line in lock.splitlines()
+        if line and not line.startswith((" ", "#"))
+    ]
+    if not requirements:
+        fail("schema validation lock lists no requirements")
+    for requirement in requirements:
+        if not re.fullmatch(r"[A-Za-z0-9._-]+==[A-Za-z0-9.]+", requirement):
+            fail(f"schema validation requirement is not an exact pin: {requirement}")
+    entries = re.split(r"\n(?=[A-Za-z0-9])", lock.split("\n\n", 1)[-1].strip())
+    for entry in entries:
+        if "--hash=sha256:" not in entry:
+            fail(f"schema validation requirement has no hash: {entry.split()[0]}")
 
 
 def validate_readiness_walkthrough() -> None:
@@ -385,6 +409,7 @@ def main() -> None:
     validate_source_log()
     validate_security()
     validate_workflow()
+    validate_schema_lock()
     validate_readiness_walkthrough()
     validate_hygiene(files)
 

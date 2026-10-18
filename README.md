@@ -75,6 +75,7 @@ This framework does not govern AI model development directly. It supports govern
 * `schemas/` — machine-readable claim, invariant, evidence, configuration, change-impact, and operating-disposition contracts
 * `examples/secure-inference-cell/reference-bundle.json`
 * `tools/validate_assurance.py`
+* `tools/validate_schemas_standard.py` and `requirements-schema.lock` - standard Draft 2020-12 validation with a hash-locked engine
 * `tests/test_continuous_assurance.py`
 * `docs/quantum-era-crypto-agility-reference-thread.md` - optional synthetic assurance/reference thread
 * `examples/crypto-agility/synthetic-reference-thread.json` - synthetic crypto-agility fixture
@@ -213,6 +214,8 @@ Start with `docs/continuous-assurance-thread.md`, then run:
 python3 -B tools/validate_assurance.py examples/secure-inference-cell/reference-bundle.json
 python3 -m unittest discover -s tests -v
 ```
+
+For standard Draft 2020-12 validation, install `requirements-schema.lock` and run `python3 -B tools/validate_schemas_standard.py`; see `docs/schema-versioning-and-validation.md`.
 
 The evaluator fails closed for unsupported schema versions, unknown flows, revoked authority, stale or mismatched evidence, incomplete P1–P5 invariants, and incomplete retirement. These are reference-model checks, not proof of a deployed system.
 

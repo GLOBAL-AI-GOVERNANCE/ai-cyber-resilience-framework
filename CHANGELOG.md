@@ -4,6 +4,7 @@
 
 - Added a public-safe AI-compressed attack-phase mitigation reference. It states intended architectural effects and claim limits. `authority_effect: NONE`. It does not change the published v0.1.1 release and it does not release v0.2.0.
 - Bounded capability, containment, and reference-decision wording, and stated in the README, claims boundary, state model, and validator output that `PERMITTED` is a reference-model output, not an operating authorization. It does not release v0.2.0.
+- Added standard JSON Schema Draft 2020-12 validation of all nine schemas and their canonical instances, with a hash-locked engine required in CI, and documented the three validation layers. Schemas and catalog digests are unchanged. It does not release v0.2.0.
 - Linked the separate Containment Ledger review instrument. The link does not change the published v0.1.1 release, and a ledger record is not certification or operational authorization.
 
 ## Unreleased — v0.2.0 Candidate: Continuous Assurance Thread
