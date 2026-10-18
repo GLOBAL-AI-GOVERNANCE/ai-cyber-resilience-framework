@@ -1,6 +1,7 @@
-# Exact, hash-locked dependencies for tools/validate_schemas_standard.py.
+# Exact, hash-locked dependencies for tools/validate_schemas_standard.py (Python 3.11 or later).
 # Install with: python3 -m pip install --require-hashes --no-deps -r requirements-schema.lock
 # Hashes are the published PyPI SHA-256 digests for every distribution file of each pinned version.
+# typing-extensions is required by referencing on Python earlier than 3.13 and is installed on all versions.
 
 attrs==26.1.0 \
     --hash=sha256:c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309 \
@@ -149,3 +150,6 @@ rpds-py==2026.9.1 \
 six==1.17.0 \
     --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274 \
     --hash=sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81
+typing-extensions==4.16.0 \
+    --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8 \
+    --hash=sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5

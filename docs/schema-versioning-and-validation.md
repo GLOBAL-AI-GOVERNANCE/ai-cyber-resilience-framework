@@ -32,7 +32,7 @@ Unit tests also check that mutated copies are rejected for a missing required fi
 
 ## Dependencies and local use
 
-Layer 1 needs `jsonschema` and `rfc3339-validator`. They are pinned exactly, with SHA-256 hashes, in `requirements-schema.lock`:
+Layer 1 needs Python 3.11 or later, `jsonschema`, and `rfc3339-validator`. They and their dependencies are pinned exactly, with SHA-256 hashes, in `requirements-schema.lock`:
 
 ```bash
 python3 -m venv .venv
