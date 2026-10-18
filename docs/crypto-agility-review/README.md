@@ -78,7 +78,7 @@ One reviewer may cover both, or several reviewers may each cover one. Each recei
 
 Each reviewer discloses any relationship with the project, its maintainers, or a vendor with an interest in the outcome. A relationship does not automatically disqualify a reviewer, but it must be disclosed.
 
-Project-authored, Grok-, Codex-, or ChatGPT-generated, or otherwise same-control-boundary AI-generated reviews do not qualify.
+Project-authored or otherwise same-control-boundary reviews do not qualify as independent review.
 
 ## Severity
 

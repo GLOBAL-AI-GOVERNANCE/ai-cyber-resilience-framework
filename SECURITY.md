@@ -14,7 +14,6 @@ Use GitHub private vulnerability reporting or a private security advisory for:
 
 Do not place sensitive vulnerability details, credentials, target information, or potentially harmful procedures in a public issue.
 
-Public issues may be used for non-sensitive documentation defects, broken links, usability improvements, and clearly public source corrections.
 
 ## Scope
 
