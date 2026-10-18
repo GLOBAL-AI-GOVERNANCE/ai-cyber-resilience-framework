@@ -1,0 +1,56 @@
+{
+  "manifest_version": "1.0.0",
+  "subject": "AI Cyber Resilience Framework v0.2.0 candidate: optional synthetic crypto-agility reference thread",
+  "repository": "GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework",
+  "review_commit": "bf4fab7f590d4d2af6e08596f7a6fb1b0f220c96",
+  "review_tree": "2aca76d0a53666361a37b6af197dfa8553aabe98",
+  "hash_algorithm": "sha256 over file bytes at review_commit",
+  "review_artifacts": [
+    {
+      "path": "docs/quantum-era-crypto-agility-reference-thread.md",
+      "sha256": "e00f613cc367ffc478f5af2a09f37de6527679ca622790f6530c7e6dab9d3ac3"
+    },
+    {
+      "path": "schemas/crypto-agility-thread.schema.json",
+      "sha256": "d3d71d67ca7073e71e0d89ddc122efa3ffa407d7d0af59b24943d4500bbb79e4"
+    },
+    {
+      "path": "examples/crypto-agility/synthetic-reference-thread.json",
+      "sha256": "2cf25938d6b53c54efefd0a72d995d5a95f78a53cb5dcf49b8991184086ea43c"
+    }
+  ],
+  "supporting_context": [
+    {
+      "path": "schemas/schema-catalog.json",
+      "sha256": "0ed1f83a7ba7a7aea18772f68423e2543e8ff1b88f3860c3aac8336c95a6e69f"
+    },
+    {
+      "path": "tools/validate_assurance.py",
+      "sha256": "8f70c2c0a43cc9ed6bb197ed4111af2e096dd7027cd88183c59d3d0fb6a17f8e"
+    },
+    {
+      "path": "tools/validate_schemas_standard.py",
+      "sha256": "c78196d8937d843ae48e72595cb69bc9dfd34bf5cd59a60379969876d1bdb8c3"
+    },
+    {
+      "path": "tests/test_schema_standard.py",
+      "sha256": "4e537fb357b2ef4d67a8e0c112fb208a9b00e01894a4dd168dbcc2bd5ab9447d"
+    },
+    {
+      "path": "docs/public-safe-claims.md",
+      "sha256": "f086bd35b662eb37adc029ac9cbfaea1fc4b5507b1626415fcbec8661948733f"
+    },
+    {
+      "path": "docs/schema-versioning-and-validation.md",
+      "sha256": "424e93722b31be9f27b1cfa907e9c10fc4eac53e7a75c3a79c8b601527fb7092"
+    },
+    {
+      "path": "docs/release-readiness-v0.2.0-machine.md",
+      "sha256": "3c05f656ea4d045aa2a773ce591777a1e26b0683daee22d589b01fe47daa95ac"
+    },
+    {
+      "path": "docs/sources-and-evidence.md",
+      "sha256": "546da19659d10adff9817c4ae1ad084144be0d6aec312e747912a43e0f878ed9"
+    }
+  ]
+}

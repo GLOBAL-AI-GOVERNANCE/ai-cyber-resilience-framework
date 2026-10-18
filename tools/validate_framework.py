@@ -41,6 +41,10 @@ ASSURANCE_REQUIRED = (
     ROOT / "tools" / "validate_schemas_standard.py",
     ROOT / "tests" / "test_schema_standard.py",
     ROOT / "requirements-schema.lock",
+    ROOT / "docs" / "crypto-agility-review" / "README.md",
+    ROOT / "docs" / "crypto-agility-review" / "manifest.json",
+    ROOT / "docs" / "crypto-agility-review" / "REVIEW_RECEIPT_TEMPLATE.json",
+    ROOT / "docs" / "crypto-agility-review" / "FINDING_TEMPLATE.md",
 )
 
 OLD_NAME = "AI-Compressed Cyber Defense Framework"
