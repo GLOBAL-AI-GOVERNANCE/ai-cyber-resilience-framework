@@ -96,7 +96,7 @@ The containment property ensures that a compromised domain cannot directly inter
 
 ### Susceptibility Reduction: Blocking Lateral Movement
 
-Modern attacks depend on exploiting trust relationships. When systems in the same segment can freely initiate connections, credential abuse, relay, and remote-administration traversal become easier. Domain separation — enforced by firewalls, data diodes, cross-domain solutions (CDS), software-defined networking, micro-segmentation, zero trust architectures, hardware-enforced isolation, and mandatory access controls — eliminates implicit trust. Every interaction between domains must be explicitly authorized, transforming the attack surface from a flat plane into a set of narrow, monitored interfaces.
+Modern attacks depend on exploiting trust relationships. When systems in the same segment can freely initiate connections, credential abuse, relay, and remote-administration traversal become easier. Domain separation — enforced by firewalls, data diodes, cross-domain solutions (CDS), software-defined networking, micro-segmentation, zero trust architectures, hardware-enforced isolation, and mandatory access controls — is intended to remove implicit trust. Every interaction between domains must be explicitly authorized, transforming the attack surface from a flat plane into a set of narrow, monitored interfaces.
 
 ### Privilege Isolation: Defeating Escalation
 
@@ -165,7 +165,7 @@ Recommended application:
 
 ## Conclusion
 
-AI-compressed cyberattacks have made controls-based security insufficient. The adversary’s tools are explicitly designed to bypass or adapt around controls.
+AI-compressed attacks make controls-based security alone harder to sustain, because faster discovery and exploitation shorten the time defenders have to detect and respond.
 
 **Domain separation**, as defined in NIST SP 800-160 and reinforced by its complementary principles, provides the structural foundation for defense that forces an adversary to cross, compromise, or subvert a defined boundary before reaching higher-value mission functions.
 
