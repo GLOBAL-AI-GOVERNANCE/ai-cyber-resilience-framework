@@ -94,4 +94,3 @@ This repository validates the internal consistency of reference artifacts and th
 `schemas/dependency-exit-evidence.schema.json` records a bounded replacement exercise for one declared dependency. The Continuous Assurance Thread references that record. It does not copy the exercise into the secure-inference bundle and it does not turn this repository into procurement governance.
 
 A SUCCESS requires a replacement, a demonstrated switch and recovery, recovered state where applicable, and no retained critical residual dependency. JSON Schema checks structure. `tools/validate_dependency_exit.py` enforces those SUCCESS conditions. The record stays `reference_only`, requires human review, and keeps `authority_effect` at `NONE`. It does not claim supplier independence, operational resilience, production safety, or business continuity. The synthetic FAILED fixture is `examples/dependency-exit/synthetic-exit-failed.json`.
-

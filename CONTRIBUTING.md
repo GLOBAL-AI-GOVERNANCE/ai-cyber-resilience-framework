@@ -32,4 +32,3 @@ A contribution should answer:
 3. Is it useful to a practitioner?
 4. Does it avoid overstated claims?
 5. Does it improve verification or usability?
-

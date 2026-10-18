@@ -1,8 +1,8 @@
 # v0.2.0 Machine-Only Release-Readiness Record
 
 **Record date:** 2026-08-30
-**Assessed candidate base:** `c167d17` (`main` at assessment start), plus the uncommitted machine-readiness changes represented by this record
-**Comparison boundary:** published tag `v0.1.1` at `84490f2`
+**Assessed candidate base:** `ce55b9a` (`main` at assessment start; recorded before the August 2026 history sanitation as `c167d17`, same Git tree `1adad47`), plus the uncommitted machine-readiness changes represented by this record
+**Comparison boundary:** published tag `v0.1.1` at `bf16ec0` (recorded before the August 2026 history sanitation as `84490f2`, same Git tree `fa78c4b`)
 **Scope:** public-safe, offline, deterministic repository checks only
 **Machine conclusion:** checks pass for the repository artifact set described below; this is not approval to publish.
 
@@ -28,7 +28,14 @@ Observed on 2026-08-30:
 - Framework validation: pass; 55 repository files checked; identity, links, citation, sources, security, workflow pins, and hygiene verified.
 - Assurance validation: pass; synthetic reference decision `PERMITTED`; all encoded reference assurance conditions satisfied.
 - Unit tests: pass; 21 tests; includes deterministic negative cases for unknown flow, expiry, configuration and system mismatch, revoked authority, missing P1-P5 properties, unsupported schemas, superseded and failed evidence, duplicate identifiers, missing disposition evidence, malformed time, reauthorization, retirement, recovery shortcuts, guided-assessment boundaries, and the optional synthetic crypto-agility boundary.
-- Whitespace/error scan: pass; `git diff --check` reported no errors.
+- Whitespace/error scan: pass; `git diff --check` (working tree against the index) reported no errors. This scope does not cover committed files. A full-tree scan of the record commit (`git diff --check <empty-tree> HEAD`) reports trailing blank lines at the end of `CHANGELOG.md` and `CONTRIBUTING.md`.
+
+Re-observed on 2026-10-17 on `main` after the dependency-exit, recovery-basis, walkthrough, and mitigation-matrix additions:
+
+- Framework validation: pass; 64 repository files checked; identity, links, citation, sources, security, workflow pins, readiness evidence rules, and hygiene verified.
+- Assurance validation: pass; synthetic reference decision `PERMITTED`.
+- Unit tests: pass; 26 tests.
+- Whitespace/error scan: pass; `git diff --check <empty-tree> HEAD` (all committed files) reported no errors.
 
 The reference decision `PERMITTED` is an evaluator output over a local synthetic fixture. It is not an operating authorization, containment claim, deployed-effectiveness result, certification, or real incident evidence.
 
