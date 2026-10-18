@@ -274,7 +274,7 @@ def validate_source_log() -> None:
 def validate_security() -> None:
     text = SECURITY.read_text(encoding="utf-8-sig")
     requirements = (
-        "Use GitHub private vulnerability reporting",
+        "does not operate an external security-report intake",
         "Do not place sensitive vulnerability details",
         "does not certify an architecture",
         "Users remain responsible for authorization",

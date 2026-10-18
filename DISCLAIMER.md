@@ -38,10 +38,6 @@ References to frontier AI capabilities reflect publicly discussed capabilities i
 
 In no event shall the contributors or maintainers be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from the use of this framework, even if advised of the possibility of such damages.
 
-## Contributions
-
-Contributions are welcome provided they maintain the public-safe, evidence-based, and defensive character of the framework.
-
 ---
 
 *By using this repository, you acknowledge that you have read, understood, and agree to this disclaimer.*
