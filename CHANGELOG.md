@@ -10,7 +10,7 @@
 - Clarified qualitative readiness scoring so Strong requires current, relevant verification evidence, N/A requires an applicability rationale, and an overall label cannot conceal a failed or unevidenced critical isolation or recovery boundary. Added one synthetic decision-package walkthrough that reuses the existing templates. This is documentation on main. It does not change the published v0.1.1 release and it does not authorize operation.
 
 - Added a configuration-bound Continuous Assurance Thread from claims and invariants through evidence, operating disposition, recovery, reauthorization, and retirement.
-- Added six machine-readable assurance schemas plus a digest-verified schema catalog.
+- Added nine machine-readable assurance schemas plus a digest-verified schema catalog.
 - Added a separate System Configuration Passport; Agent Trust Passport semantics remain outside this repository and are not redefined.
 - Added explicit evidence invalidation states and first-class ChangeImpact semantics.
 - Added a protective-state model that prevents recovery from silently returning directly to permitted operation.
@@ -18,6 +18,8 @@
 - Added adversarial regression tests for unknown flows, evidence expiry, configuration mismatch, revoked authority, missing P1–P5 properties, unsupported schemas, superseded evidence, reauthorization, and incomplete retirement.
 - Added a dependency-free local guided-assessment path with a deterministic, schema-backed, non-authorizing assurance artifact.
 - Added an optional synthetic quantum-era cryptographic resilience / crypto-agility reference thread with an explicit human release boundary; it does not evidence a real migration or deployment.
+- Bound current evidence to the named recovery basis. The evaluator fails closed on a missing recovery basis, and evidence not bound to that basis cannot support permitted operation.
+- Added dependency-exit evidence: a schema, synthetic passing and failed exit records, a validator, and regressions. It does not evidence a real dependency exit.
 - Added a public-safe machine-only release-readiness record and strengthened deterministic consistency regressions for duplicate identifiers, evidence results, disposition references, system identity, and malformed times.
 - This section describes merged development work only; it does not declare a v0.2.0 release.
 
