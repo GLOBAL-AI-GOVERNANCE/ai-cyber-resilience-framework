@@ -91,7 +91,7 @@ Project-authored, Grok-, Codex-, or ChatGPT-generated, or otherwise same-control
 
 ## Submitting results
 
-Submit one [`REVIEW_RECEIPT_TEMPLATE.json`](REVIEW_RECEIPT_TEMPLATE.json) per reviewer and one [`FINDING_TEMPLATE.md`](FINDING_TEMPLATE.md) record per finding, in the public issue for this review. Unfavorable findings are welcome and are as useful as a clean result.
+Submit one [`REVIEW_RECEIPT_TEMPLATE.json`](REVIEW_RECEIPT_TEMPLATE.json) per reviewer and one [`FINDING_TEMPLATE.md`](FINDING_TEMPLATE.md) record per finding, in the public issue for this review, [#19](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/issues/19). Unfavorable findings are welcome and are as useful as a clean result.
 
 ## After review
 
