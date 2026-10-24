@@ -8,6 +8,8 @@
 
 [![Framework Checks](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml/badge.svg?branch=main)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml)
 
+**Start here: [5-Minute Assessment](#start-here-5-minute-assessment)**
+
 **Structural security against AI-compressed cyberattacks**
 
 > A public-safe defensive framework for engineering mission-resilient systems against AI-accelerated vulnerability discovery, exploit validation, multi-step attack reasoning, lateral movement, and post-compromise escalation.
@@ -15,8 +17,6 @@
 **Version:** v0.1.1
 **Status:** Public defensive reference framework for architecture assessment, evidence capture, and hardening planning. It is not executable software, certification, or proof that a control works.
 **License:** Apache 2.0
-
-Start here: [5-Minute Assessment](#start-here-5-minute-assessment)
 
 ---
 
