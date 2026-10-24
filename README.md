@@ -1,9 +1,9 @@
 # AI Cyber Resilience Framework
 
 <!-- gaig:nav -->
-[![Global AI Governance](https://img.shields.io/badge/Global_AI_Governance-portfolio-0b100d)](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE) ![Status](https://img.shields.io/badge/status-v0.1.1_reference-blue) ![authority_effect](https://img.shields.io/badge/authority__effect-NONE-lightgrey)
+**[Global AI Governance](https://ai-governance.solutions/)** · `v0.1.1 · reference` · `authority_effect: NONE`
 
-**[Connect your agent](https://ai-governance.solutions/connect.html#agents)** · **[Read the spec](https://ai-governance.solutions/connect.html#spec)** · [All products](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE#product-map)
+[Connect your agent](https://ai-governance.solutions/connect.html#agents) · [Specifications](https://ai-governance.solutions/connect.html#spec) · [All products](https://ai-governance.solutions/#products)
 <!-- /gaig:nav -->
 
 [![Framework Checks](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml/badge.svg?branch=main)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml)
@@ -309,8 +309,9 @@ This framework is provided as a public defensive resource.
 
 This framework is the **CONTAIN + RECOVER** layer. Its browser companion is the [Containment Ledger](https://global-ai-governance.github.io/containment-ledger/).
 
-- **Connect your agent:** [llms.txt](https://ai-governance.solutions/llms.txt), [machine-interface.json](https://ai-governance.solutions/machine-interface.json), and the [AI Governance Model Context Protocol Server](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp) (AI Governance MCP; command `gaig-mcp`). Compatible with Model Context Protocol (MCP) based agents.
-- **Read the spec:** [versioned specifications](https://ai-governance.solutions/connect.html#spec) and the [product map](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE#product-map).
+**[ai-governance.solutions](https://ai-governance.solutions/)** · [Connect your agent](https://ai-governance.solutions/connect.html#agents) · [Specifications](https://ai-governance.solutions/connect.html#spec) · [All products](https://ai-governance.solutions/#products)
 
-Outputs are non-authorizing (`authority_effect: NONE`). Not affiliated with or endorsed by any AI lab or platform.
+For agents: [llms.txt](https://ai-governance.solutions/llms.txt) · [machine-interface.json](https://ai-governance.solutions/machine-interface.json) · [AI Governance MCP](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp) (`gaig-mcp`). Compatible with Model Context Protocol (MCP) based agents.
+
+Framework-neutral and jurisdiction-neutral. Outputs are non-authorizing (`authority_effect: NONE`). Not affiliated with or endorsed by any AI lab or platform.
 <!-- /gaig:footer -->
