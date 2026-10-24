@@ -1,7 +1,7 @@
 # AI Cyber Resilience Framework
 
 <!-- gaig:nav -->
-**[Global AI Governance](https://ai-governance.solutions/)** · `v0.1.1 · reference` · `authority_effect: NONE`
+**[Global AI Governance](https://ai-governance.solutions/)** · `v0.1.1 · released` · `authority_effect: NONE`
 
 [Connect your agent](https://ai-governance.solutions/connect.html#agents) · [Specifications](https://ai-governance.solutions/connect.html#spec) · [All products](https://ai-governance.solutions/#products)
 <!-- /gaig:nav -->
@@ -15,7 +15,7 @@
 > A public-safe defensive framework for engineering mission-resilient systems against AI-accelerated vulnerability discovery, exploit validation, multi-step attack reasoning, lateral movement, and post-compromise escalation.
 
 **Version:** v0.1.1
-**Status:** Public defensive reference framework for architecture assessment, evidence capture, and hardening planning. It is not executable software, certification, or proof that a control works.
+**Status:** Released. A defensive reference framework for architecture assessment, evidence capture, and hardening planning; independent review of the guided assessment is open. It is not executable software, certification, or proof that a control works.
 **License:** Apache 2.0
 
 ---
