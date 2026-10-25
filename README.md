@@ -3,7 +3,9 @@
 <!-- gaig:nav -->
 **[Global AI Governance](https://ai-governance.solutions/)** · `v0.1.1 · released` · `authority_effect: NONE`
 
-[Connect your agent](https://ai-governance.solutions/connect.html#agents) · [Specifications](https://ai-governance.solutions/connect.html#spec) · [All products](https://ai-governance.solutions/#products)
+[Start where you are](https://ai-governance.solutions/start.html) · [Connect your agent](https://ai-governance.solutions/connect.html#agents) · [Specifications](https://ai-governance.solutions/connect.html#spec) · [All products](https://ai-governance.solutions/#products)
+
+Suite path, step 7 of 9: stay resilient · ← [Containment Ledger](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger) · [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) → · [start anywhere](https://ai-governance.solutions/start.html)
 <!-- /gaig:nav -->
 
 [![Framework Checks](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml/badge.svg?branch=main)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework/actions/workflows/framework-checks.yml)
