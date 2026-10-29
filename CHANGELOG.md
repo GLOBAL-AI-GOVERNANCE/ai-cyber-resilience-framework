@@ -1,17 +1,21 @@
 # Changelog
 
-## Unreleased — documentation
+## v0.2.0 — Continuous Assurance Thread
 
-- Added a Release Assets workflow. When a release is published, it reruns the framework checks on the tag, builds a source archive with SHA-256 checksums, attests build provenance, and attaches the files without replacing existing assets. Manual runs keep the output as a workflow artifact. It does not change any release gate and does not release v0.2.0.
-- Added a public-safe AI-compressed attack-phase mitigation reference. It states intended architectural effects and claim limits. `authority_effect: NONE`. It does not change the published v0.1.1 release and it does not release v0.2.0.
-- Bounded capability, containment, and reference-decision wording, and stated in the README, claims boundary, state model, and validator output that `PERMITTED` is a reference-model output, not an operating authorization. It does not release v0.2.0.
-- Added standard JSON Schema Draft 2020-12 validation of all nine schemas and their canonical instances, with a hash-locked engine required in CI, and documented the three validation layers. Schemas and catalog digests are unchanged. It does not release v0.2.0.
-- Recorded the G3 to G6 steward decisions in the v0.2.0 release gate, added a schema-compatibility note, and added a review kit for the qualified crypto-agility review required by G7. G7, G9, and G10 remain open. It does not release v0.2.0.
-- Linked the separate Containment Ledger review instrument. The link does not change the published v0.1.1 release, and a ledger record is not certification or operational authorization.
+Released 2026-10-29.
 
-## Unreleased — v0.2.0 Candidate: Continuous Assurance Thread
+### Documentation and release assets
 
-- Clarified qualitative readiness scoring so Strong requires current, relevant verification evidence, N/A requires an applicability rationale, and an overall label cannot conceal a failed or unevidenced critical isolation or recovery boundary. Added one synthetic decision-package walkthrough that reuses the existing templates. This is documentation on main. It does not change the published v0.1.1 release and it does not authorize operation.
+- Added a Release Assets workflow. When a release is published, it reruns the framework checks on the tag, builds a source archive with SHA-256 checksums, attests build provenance, and attaches the files without replacing existing assets. Manual runs keep the output as a workflow artifact.
+- Added a public-safe AI-compressed attack-phase mitigation reference. It states intended architectural effects and claim limits. `authority_effect: NONE`. Included in v0.2.0.
+- Bounded capability, containment, and reference-decision wording, and stated in the README, claims boundary, state model, and validator output that `PERMITTED` is a reference-model output, not an operating authorization. Included in v0.2.0.
+- Added standard JSON Schema Draft 2020-12 validation of all nine schemas and their canonical instances, with a hash-locked engine required in CI, and documented the three validation layers. Schemas and catalog digests are unchanged. Included in v0.2.0.
+- Recorded the G3 to G6 steward decisions in the v0.2.0 release gate, added a schema-compatibility note, and added a review kit for the qualified crypto-agility review required by G7. Release gate closed for v0.2.0.
+- Linked the separate Containment Ledger review instrument. Containment Ledger remains a separate instrument; a ledger record is not certification or operational authorization.
+
+### Continuous assurance
+
+- Clarified qualitative readiness scoring so Strong requires current, relevant verification evidence, N/A requires an applicability rationale, and an overall label cannot conceal a failed or unevidenced critical isolation or recovery boundary. Added one synthetic decision-package walkthrough that reuses the existing templates. Documentation and synthetic walkthrough; does not authorize operation.
 
 - Added a configuration-bound Continuous Assurance Thread from claims and invariants through evidence, operating disposition, recovery, reauthorization, and retirement.
 - Added nine machine-readable assurance schemas plus a digest-verified schema catalog.
@@ -25,7 +29,7 @@
 - Bound current evidence to the named recovery basis. The evaluator fails closed on a missing recovery basis, and evidence not bound to that basis cannot support permitted operation.
 - Added dependency-exit evidence: a schema, synthetic passing and failed exit records, a validator, and regressions. It does not evidence a real dependency exit.
 - Added a public-safe machine-only release-readiness record and strengthened deterministic consistency regressions for duplicate identifiers, evidence results, disposition references, system identity, and malformed times.
-- This section describes merged development work only; it does not declare a v0.2.0 release.
+- Published as v0.2.0.
 
 ## v0.1.1 — Public Identity and Verification
 

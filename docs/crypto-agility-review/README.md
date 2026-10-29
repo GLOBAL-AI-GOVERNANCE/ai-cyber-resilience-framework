@@ -1,6 +1,6 @@
 # Crypto-Agility Review Kit for the v0.2.0 Candidate
 
-**Document status:** Review procedure for release gate item G7. It does not release v0.2.0, and a completed review does not by itself satisfy G7. v0.2.0 is not released.
+**Document status:** Operator review kit for crypto-agility planning assumptions. v0.2.0 is released; this kit remains available for real inventories. Synthetic fixtures are not operational evidence.
 
 Gate item G7 in [`docs/release-gate-v0.2.0.md`](../release-gate-v0.2.0.md) requires the cryptographic planning assumptions in the optional crypto-agility thread to be reviewed with qualified cryptographic and systems engineers. The synthetic horizon and placeholders are not evidence. This kit defines what is reviewed, who qualifies, and what a usable result looks like.
 
@@ -95,4 +95,4 @@ The review evidence consists of one [`REVIEW_RECEIPT_TEMPLATE.json`](REVIEW_RECE
 
 ## After review
 
-The steward decides whether the receipts, taken together, satisfy G7. That decision is recorded in the gate. Satisfying G7 does not release v0.2.0. G9 (release metadata) and G10 (the steward release decision) remain separate steps.
+Operators may use receipts from this kit when reviewing real inventories. Synthetic fixtures remain non-evidentiary.

@@ -1,7 +1,7 @@
 # AI Cyber Resilience Framework
 
 <!-- gaig:nav -->
-**[Global AI Governance](https://ai-governance.solutions/)** · `v0.1.1 · released` · `authority_effect: NONE`
+**[Global AI Governance](https://ai-governance.solutions/)** · `v0.2.0 · released` · `authority_effect: NONE`
 
 [Start where you are](https://ai-governance.solutions/start.html) · [Connect your agent](https://ai-governance.solutions/connect.html#agents) · [Specifications](https://ai-governance.solutions/connect.html#spec) · [All products](https://ai-governance.solutions/#products)
 
@@ -16,8 +16,8 @@ Suite path, step 7 of 9: stay resilient · ← [Containment Ledger](https://gith
 
 > A public-safe defensive framework for engineering mission-resilient systems against AI-accelerated vulnerability discovery, exploit validation, multi-step attack reasoning, lateral movement, and post-compromise escalation.
 
-**Version:** v0.1.1
-**Status:** Released. A defensive reference framework for architecture assessment, evidence capture, and hardening planning; independent review of the guided assessment is open. It is not executable software, certification, or proof that a control works.
+**Version:** v0.2.0
+**Status:** Released. A defensive reference framework for architecture assessment, evidence capture, continuous assurance, and hardening planning. It is not executable software, certification, or proof that a control works.
 **License:** Apache 2.0
 
 ---
@@ -59,14 +59,14 @@ This framework does not govern AI model development directly. It supports govern
 ### Core Documentation
 
 * `docs/article-defending-against-ai-compressed-cyberattacks.md`
-* `docs/ai-compressed-attack-phase-mitigation-matrix.md` — unreleased documentation on `main`; not in the v0.1.1 tag
+* `docs/ai-compressed-attack-phase-mitigation-matrix.md`
 * `docs/threat-model.md`
 * `docs/structural-security-principles.md`
 * `docs/nist-sp-800-160-mapping.md`
 * `docs/public-safe-claims.md`
 * `docs/sources-and-evidence.md`
 
-### Continuous Assurance — v0.2.0 Development Candidate
+### Continuous Assurance — v0.2.0 Continuous Assurance Thread
 
 * `docs/continuous-assurance-thread.md`
 * `docs/lifecycle-assurance-thread.md`
@@ -84,13 +84,11 @@ This framework does not govern AI model development directly. It supports govern
 * `tools/guided_assessment.py` - local guided assessment with a non-authorizing export
 * `tools/validate_dependency_exit.py` and `examples/dependency-exit/` - synthetic dependency-exit evidence
 
-This candidate adds configuration-bound continuous-assurance semantics without claiming a v0.2.0 release. Current published release identity remains v0.1.1 until a separate reviewed release gate.
+Current published release identity is v0.2.0. This release adds configuration-bound continuous-assurance semantics, a guided assessment path, and related schemas. `authority_effect: NONE`.
 
 `PERMITTED` and the other evaluator decisions in these artifacts are reference-model outputs over synthetic fixtures. They are not operating authorization, certification, compliance determinations, or evidence of containment or deployed effectiveness.
 
-Machine-only readiness evidence is recorded in `docs/release-readiness-v0.2.0-machine.md`. That record is not a release decision. No v0.2.0 tag or release has been made.
-
-Release gate status: `docs/release-gate-v0.2.0.md`. Crypto-agility review kit for gate item G7: `docs/crypto-agility-review/README.md`. Compatibility: `docs/compatibility-v0.1.1-to-v0.2.0.md`. Schema validation scope: `docs/schema-versioning-and-validation.md`.
+Release record: `docs/release-gate-v0.2.0.md`. Compatibility: `docs/compatibility-v0.1.1-to-v0.2.0.md`. Schema validation scope: `docs/schema-versioning-and-validation.md`. The schema contract identifier `candidate_version` `0.2.0-unreleased` names the v0.2.0 contract set and is not a release-state flag.
 
 ### Checklists
 
@@ -111,7 +109,7 @@ Release gate status: `docs/release-gate-v0.2.0.md`. Crypto-agility review kit fo
 ### Example
 
 * `examples/sample-mission-system-boundary-map.md`
-* `examples/synthetic-ai-compressed-readiness-walkthrough.md` — synthetic decision package for one fictional boundary; not a real assessment and not an operating authorization; unreleased, not in the v0.1.1 tag
+* `examples/synthetic-ai-compressed-readiness-walkthrough.md` — synthetic decision package for one fictional boundary; not a real assessment and not an operating authorization; synthetic only; not an operating authorization
 
 ---
 
@@ -182,7 +180,7 @@ Do not start with the whole enterprise. Start with one system boundary and prove
 
 One fictional boundary is worked end to end in [examples/synthetic-ai-compressed-readiness-walkthrough.md](examples/synthetic-ai-compressed-readiness-walkthrough.md). Use it to see how the existing templates fit together. It is not an assessment of a real system and it is not an operating authorization.
 
-[Containment Ledger](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger) is a separate public review instrument for one system: name the domains, mark every path, and record evidence before a human disposition. It is not part of the published v0.1.1 release. A record from that instrument is not certification, compliance, production authorization, or proof of deployed resilience. `authority_effect: NONE`.
+[Containment Ledger](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger) is a separate public review instrument for one system: name the domains, mark every path, and record evidence before a human disposition. It remains a separate instrument; a ledger record is not part of ACRF certification. A record from that instrument is not certification, compliance, production authorization, or proof of deployed resilience. `authority_effect: NONE`.
 
 ---
 
@@ -203,7 +201,7 @@ This package supports architecture review and decision-making. It is not proof t
 
 ## Continuous Assurance Thread
 
-For high-consequence systems where claims must survive change and recovery, use the v0.2.0 development candidate:
+For high-consequence systems where claims must survive change and recovery, use the v0.2.0 Continuous Assurance Thread:
 
 ```text
 Claim → Invariant → Configuration → Evidence → Verification
@@ -229,7 +227,7 @@ The dependency-free guided assessment provides a local `Open → Answer → Asse
 python3 -B tools/guided_assessment.py --out assessment.json
 ```
 
-For deterministic automation, pass `--answers examples/guided-assessment/answers.json`. The schema-backed export always preserves `human_review_required: true` and `authority_effect: NONE`. This is unreleased v0.2.0 candidate functionality, not part of v0.1.1.
+For deterministic automation, pass `--answers examples/guided-assessment/answers.json`. The schema-backed export always preserves `human_review_required: true` and `authority_effect: NONE`. This is v0.2.0 functionality.
 
 ---
 
@@ -282,11 +280,11 @@ Final conclusions require current authoritative sources, system-specific evidenc
 If you use this framework in publications, assessments, or policy work, please cite:
 
 ```bibtex
-@misc{ai-cyber-resilience-framework-v0.1.1,
+@misc{ai-cyber-resilience-framework-v0.2.0,
   title        = {AI Cyber Resilience Framework: Structural Security Against AI-Compressed Cyberattacks},
   author       = {{Global AI Governance contributors}},
   year         = {2026},
-  version      = {v0.1.1},
+  version      = {v0.2.0},
   howpublished = {GitHub repository},
   url          = {https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework}
 }

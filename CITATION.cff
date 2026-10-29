@@ -4,8 +4,8 @@ title: "AI Cyber Resilience Framework: Structural Security Against AI-Compressed
 abstract: "A public-safe defensive framework for engineering mission-resilient systems against AI-accelerated vulnerability discovery, exploit validation, multi-step attack reasoning, lateral movement, and post-compromise escalation. Grounded in NIST SP 800-160 systems security engineering principles with emphasis on domain separation."
 authors:
   - name: "Global AI Governance contributors"
-version: "v0.1.1"
-date-released: "2026-07-29"
+version: "v0.2.0"
+date-released: "2026-10-29"
 repository-code: "https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework"
 license: "Apache-2.0"
 keywords:
@@ -23,7 +23,7 @@ preferred-citation:
   authors:
     - name: "Global AI Governance contributors"
   title: "AI Cyber Resilience Framework: Structural Security Against AI-Compressed Cyberattacks"
-  version: "v0.1.1"
+  version: "v0.2.0"
   year: 2026
   publisher:
     name: "GitHub"

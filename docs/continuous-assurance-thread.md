@@ -1,6 +1,6 @@
 # Continuous Assurance Thread
 
-**Status:** v0.2.0 development candidate. This document is not a release claim, certification, authorization, or proof that a deployed system is trustworthy.
+**Status:** published in v0.2.0. This document is not certification, authorization, or proof that a deployed system is trustworthy.
 
 The Continuous Assurance Thread turns structural-security claims into a traceable engineering loop that can survive configuration change, evidence expiry, incident response, recovery, and reauthorization.
 

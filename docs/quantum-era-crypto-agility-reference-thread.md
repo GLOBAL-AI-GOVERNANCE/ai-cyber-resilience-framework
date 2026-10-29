@@ -17,4 +17,4 @@ The machine-readable fixture is `examples/crypto-agility/synthetic-reference-thr
 
 The fixture does not prescribe an algorithm or vendor. Its placeholder evidence references state that real tests were not performed. It does not demonstrate a real migration, post-quantum deployment, quantum-safe superiority, cryptographic invulnerability, certification, or measured operational effectiveness.
 
-The thread does not modify or replace the published v0.1.1 boundary. Inclusion on `main` does not release v0.2.0. A steward must review real inventories, confidentiality needs, interoperability, downgrade and rollback behavior, transition evidence, residual risks, and authority before any release or operational conclusion.
+The thread is published with v0.2.0 as a synthetic reference only. A steward must review real inventories, confidentiality needs, interoperability, downgrade and rollback behavior, transition evidence, residual risks, and authority before any operational conclusion.
