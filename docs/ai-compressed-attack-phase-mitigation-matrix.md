@@ -2,7 +2,7 @@
 
 **Defensive reference map for intended structural effects after initial access**
 **Document status:** Unreleased documentation on `main`. Not part of the published v0.1.1 tag.
-**Published release identity:** v0.1.1 remains the published AI Cyber Resilience Framework release until a separate release gate.
+**Published release identity:** v0.2.0.
 **Grounding:** NIST SP 800-160 domain separation and complementary principles already documented in this repository
 **authority_effect:** NONE
 

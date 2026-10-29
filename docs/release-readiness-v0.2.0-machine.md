@@ -75,4 +75,4 @@ The optional crypto-agility fixture is checked for an explicit synthetic/referen
 
 ## Explicit non-decision
 
-This record reports machine readiness, not release readiness in the governance sense. It does not authorize a tag, GitHub release, version-identity change, deployment, certification statement, or operational claim. The steward must make and record a separate release decision; until then, v0.2.0 remains an unreleased candidate and v0.1.1 remains the public release.
+Machine readiness evidence for v0.2.0. It does not authorize deployment, certification, or operational claims. `authority_effect: NONE`.

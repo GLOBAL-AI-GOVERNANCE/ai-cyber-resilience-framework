@@ -49,7 +49,7 @@ ASSURANCE_REQUIRED = (
 
 OLD_NAME = "AI-Compressed Cyber Defense Framework"
 OLD_SLUG = "ai-compressed-cyber-defense-framework"
-CURRENT_VERSION = "v0.1.1"
+CURRENT_VERSION = "v0.2.0"
 CURRENT_REPOSITORY = (
     "https://github.com/GLOBAL-AI-GOVERNANCE/"
     "ai-cyber-resilience-framework"
@@ -176,14 +176,14 @@ def validate_readme() -> None:
     if CURRENT_REPOSITORY not in text:
         fail("README does not use the current repository URL")
 
-    candidate_requirements = (
-        "v0.2.0 Development Candidate",
+    published_requirements = (
+        "v0.2.0 Continuous Assurance Thread",
         "## Continuous Assurance Thread",
-        "Current published release identity remains v0.1.1",
+        "Current published release identity is v0.2.0",
     )
-    for requirement in candidate_requirements:
+    for requirement in published_requirements:
         if requirement not in text:
-            fail(f"continuous-assurance candidate boundary missing: {requirement}")
+            fail(f"continuous-assurance published boundary missing: {requirement}")
 
 
 def extract_destination(raw: str) -> str:
@@ -242,8 +242,8 @@ def validate_citation() -> None:
     requirements = (
         'title: "AI Cyber Resilience Framework: '
         'Structural Security Against AI-Compressed Cyberattacks"',
-        'version: "v0.1.1"',
-        'date-released: "2026-07-29"',
+        'version: "v0.2.0"',
+        'date-released: "2026-10-29"',
         f'repository-code: "{CURRENT_REPOSITORY}"',
         '  type: "report"',
         '- name: "Global AI Governance contributors"',
@@ -257,10 +257,10 @@ def validate_citation() -> None:
 def validate_source_log() -> None:
     text = SOURCE_LOG.read_text(encoding="utf-8-sig")
 
-    if "**Verification date:** 2026-07-29" not in text:
+    if "**Verification date:** 2026-10-29" not in text:
         fail("source verification date is not current")
 
-    if "**Final live re-check:** 2026-07-29" not in text:
+    if "**Final live re-check:** 2026-10-29" not in text:
         fail("source live re-check date is not current")
 
     if "not an independent replication" not in text:

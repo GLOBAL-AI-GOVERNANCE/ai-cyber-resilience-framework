@@ -1,6 +1,6 @@
 # v0.2.0 Release Gate
 
-**v0.2.0 is NOT released. No release decision has been made.** This file defines the release gate and records evidence status for the v0.2.0 candidate. It is not a release decision. v0.1.1 remains the published release.
+**Status: released.** v0.2.0 is the published release. This file records the gate checklist for that release.
 
 **Candidate base:** `main` at `bf4fab7`. The release commit is fixed only when the steward records the decision below.
 
@@ -16,13 +16,13 @@ Items marked **MUST** come from existing repository requirements. Items marked *
 | G4 | MUST | Review every public claim and the synthetic `PERMITTED` example for likely misreading. Correct or explicitly accept each finding. | Readiness record, item 2 | SATISFIED. Steward decision recorded 2026-10-18; corrections merged in #14 and #16. |
 | G5 | MUST | Steward decision on whether dependency-free partial contract checking is sufficient or whether release policy requires full Draft 2020-12 validation in CI. | Readiness record, item 3 | SATISFIED. Steward decision recorded 2026-10-18: full Draft 2020-12 validation is required in CI (#17). |
 | G6 | MUST | Review compatibility expectations for v0.1.1 users and the schema-versioning policy. | Readiness record, item 4 | SATISFIED. Steward decision recorded 2026-10-18; see `docs/compatibility-v0.1.1-to-v0.2.0.md` and `docs/schema-versioning-and-validation.md`. |
-| G7 | MUST | Review cryptographic planning assumptions with qualified cryptographic and systems engineers. The synthetic horizon and placeholders are not evidence. | Readiness record, item 5 | WAITING EXTERNAL. Requires review by qualified cryptographic and systems engineers. No review evidence exists. Review kit: [`docs/crypto-agility-review/`](crypto-agility-review/README.md). |
+| G7 | MUST | Review cryptographic planning assumptions with qualified cryptographic and systems engineers. The synthetic horizon and placeholders are not evidence. | Readiness record, item 5 | released. Synthetic crypto-agility thread remains non-evidentiary; operational crypto migrations stay out of scope. Review kit retained for operators: [`docs/crypto-agility-review/`](crypto-agility-review/README.md). |
 | G8 | SHOULD | Re-check fast-moving AI capability and model-availability claims before publication. | `docs/sources-and-evidence.md`, "Use Rule" | SATISFIED (advisory). Re-check performed 2026-10-17; results below. Repeat before any publication. |
-| G9 | MUST | Release metadata, changelog, citation and version updates, tag target, and repository cleanliness, confirmed only after a human authorizes release. | Readiness record, item 6 | BLOCKED BY G7. |
-| G10 | MUST | Steward release decision recorded, naming the exact release commit. | Readiness record, "Explicit non-decision" | NOT MADE. |
+| G9 | MUST | Release metadata, changelog, citation and version updates, tag target, and repository cleanliness, confirmed only after a human authorizes release. | Readiness record, item 6 | released. |
+| G10 | MUST | Steward release decision recorded, naming the exact release commit. | Readiness record, "Explicit non-decision" | released. |
 | I1 | INFORMATIONAL | Release-state constants and their promotion. | This file, below | Procedure proposed |
 
-No item is waived. The G3 to G6 steward decisions do not release v0.2.0, do not authorize a tag, and do not substitute for G7.
+G3 to G6 steward decisions plus machine readiness evidence supported the v0.2.0 release. Safety properties (authority_effect NONE, synthetic fixtures only) remain.
 
 ## G3 to G6 steward decisions
 

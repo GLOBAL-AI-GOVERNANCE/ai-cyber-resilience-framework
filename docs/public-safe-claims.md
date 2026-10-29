@@ -48,7 +48,7 @@ It is **not** intended for:
 
 ---
 
-## Unreleased v0.2.0 Development Candidate
+## v0.2.0 Continuous Assurance Thread
 
 The candidate artifacts on `main` are not part of v0.1.1. They add these boundaries:
 

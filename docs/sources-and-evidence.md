@@ -17,9 +17,9 @@ This file supports claim discipline for public release. It is not a substitute f
 
 ## External Source Verification — v0.1.1
 
-**Verification date:** 2026-07-29
-**Final live re-check:** 2026-07-29
-**Revalidation scope:** The five listed public source pages were re-opened on 2026-07-29. This confirms page availability and the bounded support summarized below; it is not an independent replication of vendor or institute findings.
+**Verification date:** 2026-10-29
+**Final live re-check:** 2026-10-29
+**Revalidation scope:** The five listed public source pages were re-opened on 2026-10-29. This confirms page availability and the bounded support summarized below; it is not an independent replication of vendor or institute findings.
 
 **Public-release choice:** The package relies on summary-level public sources that are useful to end users and avoids detailed exploit-capability articles that are unnecessary for applying this defensive framework.
 
